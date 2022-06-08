@@ -11,7 +11,7 @@ client.on("ready", () => {
 
 client.on("messageCreate" , (message) => {
     if (message.content == "!comando") {
-        message.author.send("Hey ciao!");
+        message.author.send("Hey ciao")
     }
 });
 
