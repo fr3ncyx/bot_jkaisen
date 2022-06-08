@@ -13,13 +13,13 @@ client.on("messageCreate" , (message) => {
     if (message.content == "!comando") {
         message.author.send("Hey ciao")
     }
-});
+})
 
 client.on("messageCreate" , (message) => {
-    if (message.content == "!testtag") {
-        message.channel.send("Ciao" + message.author.toString());
+    if (message.content == "!test") {
+        message.channel.send("Ciao" + message.author.toString())
     }
-});
+})
 
 client.on("messageCreate", (message) => {
     if (message.content == "!ciao") {
