@@ -19,7 +19,7 @@ client.on("messageCreate" , (message) => {
 
 client.on("messageCreate" , (message) => {
     if (message.content == "!test") {
-        message.channel.send("Ciao" + message.author.toString())
+        message.channel.send("Ciao" + " " + message.author.toString())
     }
 })
 
@@ -52,7 +52,7 @@ client.on("messageCreate", (message) => {
 })
 
 client.on("messageCreate" , (message) =>{
-    if(message.content == "Jk!") {
+    if(message.content == "Jk!" + message.content) {
        var random = Math.floor(Math.random() * messaggi.length)
        message.channel.send(messaggi[random])
     }
