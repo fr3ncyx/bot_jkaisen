@@ -54,8 +54,9 @@ function oraAttuale(){
     var minutes  = new Date().getMinutes()
 
     var canale = client.channels.cache.get("956662480875159646")
-    if(hour == 17 && minutes == 19 ) {
-       var embed = new Discord.MessageEmbed()
+
+    if (hour == 17 && minutes == 24 ) {
+        var embed = new Discord.MessageEmbed()
            .setColor("#ff0000")
            .setTitle("Jkaisen")
            .setDescription(`${message.author.username} ecco a te il link discord: https://discord.gg/Pkhx88T3Z4 `)
