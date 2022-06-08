@@ -51,4 +51,13 @@ client.on("messageCreate", (message) => {
     }
 })
 
- 
+function oraAttuale(){
+    var hour = new Date().getHours();
+    var minutes  = new Date().getMinutes();
+
+    var canale = client.channels.cache.get("956662480875159646");
+    if(hour == 15 && minutes == 34 ) {
+       canale.send("Notifica")
+    }
+}
+setInterval(oraAttuale, 1000*60)
