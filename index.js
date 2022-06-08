@@ -15,6 +15,12 @@ client.on("messageCreate" , (message) => {
     }
 });
 
+client.on("messageCreate" , (message) => {
+    if (message.content == "!testtag") {
+        message.channel.send("Ciao" + message.author.toString());
+    }
+});
+
 client.on("messageCreate", (message) => {
     if (message.content == "!ciao") {
         message.channel.send("ciao anche a te")
