@@ -52,7 +52,7 @@ client.on("messageCreate", (message) => {
 })
 
 client.on("messageCreate" , (message) =>{
-    if(message.content == "Jk!" + MessageEvent) {
+    if(message.content == "Jk!" + message.content) {
        var random = Math.floor(Math.random() * messaggi.length)
        message.channel.send(messaggi[random])
     }
