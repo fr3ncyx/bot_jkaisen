@@ -56,8 +56,8 @@ function oraAttuale(){
 
     var canale = client.channels.cache.get("956662480875159646")
 
-    if (hour == 17 && minutes == 35 ) {
-        canale.send(embed)
+    if (hour == 17 && minutes == 38 ) {
+        canale.send("Notifica")
     }
 }
 setInterval(oraAttuale, 1000*60)
