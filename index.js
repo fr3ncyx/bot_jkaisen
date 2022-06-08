@@ -54,7 +54,7 @@ function oraAttuale(){
     var minutes  = new Date().getMinutes()
 
     var canale = client.channels.cache.get("956662480875159646")
-    if(hour == 17 && minutes == 18 ) {
+    if(hour == 17 && minutes == 19 ) {
        var embed = new Discord.MessageEmbed()
            .setColor("#ff0000")
            .setTitle("Jkaisen")
@@ -64,7 +64,7 @@ function oraAttuale(){
            .addField("Titolo1" , "Contenuto1", false)
            .addField("Titolo2" , "Contenuto2", true)
      
-        message.channel.send({embeds: [embed] })
+        canale.send({embeds: [embed] })
     }
 }
 setInterval(oraAttuale, 1000*60)
