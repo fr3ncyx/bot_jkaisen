@@ -42,8 +42,7 @@ client.on("messageCreate", (message) => {
             .setTitle("Jkaisen")
             .setDescription(`${message.author.username} ecco a te il link discord: https://discord.gg/Pkhx88T3Z4 `)
             .setThumbnail("https://lh3.googleusercontent.com/MTyHWidhk1Uu0yHSZzoTpMUG4ZoCXOdhY2qqjcK8OOfsMh4yjAUF3uigIZ6XFZENH2DfDQ=s99")
-            .setTimestamp()
-            
+
         message.channel.send({embeds: [embed] })
     }
 })
