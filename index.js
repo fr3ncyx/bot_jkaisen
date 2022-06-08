@@ -5,6 +5,8 @@ const client = new Discord.Client(
 
 client.login(process.env.token)
 
+var embed = new Discord.MessageEmbed()
+
 client.on("ready", () => {
     console.log("Bot online")
 })
@@ -37,9 +39,12 @@ client.on("messageCreate", (message) => {
 
     if (message.content == "!team") {
         var embed = new Discord.MessageEmbed()
+            .setColor("RED")
             .setTitle("Jkaisen")
             .setDescription(`${message.author.username} ecco a te il link discord: https://discord.gg/Pkhx88T3Z4 `)
             .setThumbnail("https://lh3.googleusercontent.com/MTyHWidhk1Uu0yHSZzoTpMUG4ZoCXOdhY2qqjcK8OOfsMh4yjAUF3uigIZ6XFZENH2DfDQ=s99")
+            .setFooter("Footer", "https://lh3.googleusercontent.com/MTyHWidhk1Uu0yHSZzoTpMUG4ZoCXOdhY2qqjcK8OOfsMh4yjAUF3uigIZ6XFZENH2DfDQ=s99")
+            .timestamp()
         message.channel.send({embeds: [embed] })
     }
 })
