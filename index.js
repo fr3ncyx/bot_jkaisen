@@ -55,7 +55,7 @@ function oraAttuale(){
 
     var canale = client.channels.cache.get("956662480875159646")
 
-    if (hour == 17 && minutes == 24 ) {
+    if (hour == 17 && minutes == 27 ) {
         var embed = new Discord.MessageEmbed()
             .setColor("#ff0000")
             .setTitle("Jkaisen")
