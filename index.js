@@ -58,4 +58,4 @@ function oraAttuale(){
        canale.send("Notifica")
     }
 }
-setInterval(oraAttuale, 0)
+setInterval(oraAttuale, 1000*60)
