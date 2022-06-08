@@ -9,6 +9,12 @@ client.on("ready", () => {
     console.log("Bot online")
 })
 
+client.on("messageCreate" , (message) => {
+    if (message.content == "!comando") {
+        message.author.send("Hey ciao!");
+    }
+});
+
 client.on("messageCreate", (message) => {
     if (message.content == "!ciao") {
         message.channel.send("ciao anche a te")
