@@ -5,7 +5,7 @@ const client = new Discord.Client(
 
 client.login(process.env.token)
 
-var embed = new Discord.MessageEmbed()
+var messaggi = ["No", "Si", "Probabilmente"]
 
 client.on("ready", () => {
     console.log("Bot online")
@@ -48,5 +48,12 @@ client.on("messageCreate", (message) => {
             .addField("Titolo2" , "Contenuto2", true)
 
         message.channel.send({embeds: [embed] })
+    }
+})
+
+client.on("messageCreate" , (message) =>{
+    if(message.content == "Jk!") {
+       var random = Math.floor(Math.random() * messaggi.length)
+       message.channel.send(messaggi[random])
     }
 })
