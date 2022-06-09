@@ -32,7 +32,7 @@ client.on("messageCreate", (message) => {
         }
 
         var embed = new Discord.MessageEmbed()
-            .setTitle(utente.tag)
+            .setTitle("nome", utente.tag)
             .setDescription("Tutte le info di questo utente")
             .setThumbnail(utente.avatarURL())
             .addField("User id", "```" + utente.id + "```", true)
