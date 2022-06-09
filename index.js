@@ -73,17 +73,8 @@ client.on("guildMemberRemove", member => {
 client.on("message", (message) => {
     if (message.content.startsWith("!userinfo")){
         if(message.content == "!userinfo"){
-            var utente = message.member;
+            var utente = message.member
         }
-        else{
-            var utente = message.mentions.members.first();
-        }
-
-        if(!utente) {
-            message.channel.send("Non ho trovato questo utente")
-            return
-        }
-
 
         var embed = new Discord.MessageEmbed()
         .setTitle(utente.user.tag)
