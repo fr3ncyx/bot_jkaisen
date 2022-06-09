@@ -77,7 +77,6 @@ client.on("message", (message) => {
                     .setTitle(server.name)
                     .setDescription("Tutte le info su questo server")
                     .setThumbnail(server.iconURL())
-                    .addField("Owner", server.owner.user.username, true)
                     .addField("Server", server.id, true)
 
             message.channel.send(embed)
