@@ -129,6 +129,7 @@ client.on("messageCreate", (message) => {
         .addField("User id", utente.user.id, true)
         .addField("Is a bot?", utente.user.bot ? "Yes" : "No")
         .addField("Account created", utente.user.createdAt.toDateString(), true)
+        .addField("Joined this server", "```" + utente.joinedAt.toDateString() + "```", true)
 
         message.channel.send({embeds: [embed] })
 
