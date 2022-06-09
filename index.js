@@ -68,3 +68,16 @@ client.on("guildMemberRemove", member => {
     var canale = client.channels.cache.get("984354539555659827")
     canale.setName("Members: " + member.guild.memberCount)
 })
+
+client.on("messageCreate", (message) => {
+    if (message.content == "!serverinfo") {
+             var sever = message.member.guild;
+
+             var embed = new Discord.MessageEmbed()
+                     .setTitle(server.name)
+                     .setDescription("Tutte le info su questo server")
+                     .setThumbnail(server.iconURL())
+                     .addField("Owner", server.owner.user.username, true)
+                     .addField("Server", server.id, true)
+    }
+})
