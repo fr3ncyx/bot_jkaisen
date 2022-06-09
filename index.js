@@ -24,7 +24,6 @@ client.on("messageCreate", message => {
             .setDescription("Tutte le info di questo utente")
             .setThumbnail(utente.user.avatarURL())
             .addField("User id", "```" + utente.user.id + "```", true)
-            .addField("Status", "```" + utente.user.presence.status + "```", true)
             .addField("Is a bot?", utente.user.bot ? "```Yes```" : "```No```", true)
             .addField("Account created", "```" + utente.user.createdAt.toDateString() + "```", true)
             .addField("Joined this server", "```" + utente.joinedAt.toDateString() + "```", true)
