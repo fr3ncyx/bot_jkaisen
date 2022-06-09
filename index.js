@@ -88,6 +88,15 @@ client.on("message", (message) => {
         if(utente.hasPermission("ADMINISTRATOR")){
             elencoPermessi = "ADMINISTRATOR"
         }
+        else{
+            var permessi = ["CREATE_INSTANT_INVITE", "KICK_MEMBERS", "BAN_MEMBERS", "MANAGE_CHANNELS", "MANAGE_GUILD", "ADD_REACTIONS", "VIEW_AUDIT_LOG", "PRIORITY_SPEAKER", "STREAM", "VIEW_CHANNEL", "SEND_MESSAGES", "SEND_TTS_MESSAGES", "MANAGE_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "READ_MESSAGE_HISTORY", "MENTION_EVERYONE", "USE_EXTERNAL_EMOJIS", "VIEW_GUILD_INSIGHTS", "CONNECT", "SPEAK", "MUTE_MEMBERS", "DEAFEN_MEMBERS", "MOVE_MEMBERS", "USE_VAD", "CHANGE_NICKNAME", "MANAGE_NICKNAMES", "MANAGE_ROLES", "MANAGE_WEBHOOKS", "MANAGE_EMOJIS"]
+
+            for (var i = 0; i < permessi.length; i++){
+                if(utente.hasPermission(permessi[i])) {
+                    elencoPermessi += "- " + permessi[i]+ "\r";
+                }
+            }
+        }
 
         var embed = new Discord.MessageEmbed()
         .setTitle(utente.user.tag)
@@ -98,5 +107,10 @@ client.on("message", (message) => {
         .addField("Is a bot?", utente.user.bot ? "Yes" : "No")
         .addField("Account created", utente.user.createdAt.toDateString(), true)
         .addField("Joined this server", utente.joinedAt.toDateString(),true)
+        .addField("Permission", elencoPermessi, false)
+        .addField("Roles", utente.roles.cache.map(ruolo => ruolo.name).join("\r"), false)
+
+        message.channel.send(embed)
+
     }
 })
