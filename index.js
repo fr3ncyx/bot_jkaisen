@@ -5,7 +5,7 @@ const client = new Discord.Client(
 
 client.login(process.env.token)
 
-client.on("message", message => {
+client.on("messageCreate", message => {
     if (message.content.startsWith("!userinfo2")) {
         if (message.content == "!userinfo2") {
             var utente = message.member;
