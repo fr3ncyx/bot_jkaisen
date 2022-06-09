@@ -68,4 +68,35 @@ client.on("guildMemberAdd", member => {
 client.on("guildMemberRemove", member => {
     var canale = client.channels.cache.get("984354539555659827")
     canale.setName("Members: " + member.guild.memberCount)
+});
+
+client.on("message", (message) => {
+    if (message.content.startsWith("!userinfo")){
+        if(message.content == "!userinfo"){
+            var utente = message.member;
+        }
+        else{
+            var utente = message.mentions.members.first();
+        }
+
+        if(!utente) {
+            message.channel.send("Non ho trovato questo utente")
+            return
+        }
+
+        var elencoPermessi ="";
+        if(utente.hasPermission("ADMINISTRATOR")){
+            elencoPermessi = "ADMINISTRATOR"
+        }
+
+        var embed = new Discord.MessageEmbed()
+        .setTitle(utente.user.tag)
+        .setDescription("Tutte le info di questo utente")
+        .setThumbnail(utente.user.avatarURL())
+        .addField("User id", utente.user.id, true)
+        .addField("Status", utente.user.presence.status, true)
+        .addField("Is a bot?", utente.user.bot ? "Yes" : "No")
+        .addField("Account created", utente.user.createdAt.toDateString(), true)
+        .addField("Joined this server", utente.joinedAt.toDateString(),true)
+    }
 })
