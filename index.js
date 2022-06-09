@@ -34,7 +34,7 @@ client.on("messageCreate", (message) => {
         var embed = new Discord.MessageEmbed()
             .setTitle(utente.tag)
             .setDescription("Tutte le info di questo utente")
-            .setThumbnail(utente.user.avatarURL())
+            .setThumbnail(utente.avatarURL())
             .addField("User id", "```" + utente.id + "```", true)
             .addField("Status", utente.presence ? utente.presence.status : "offline", true)
             .addField("Is a bot?", utente.bot ? "```Yes```" : "```No```", true)
