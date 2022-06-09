@@ -64,12 +64,13 @@ client.on("guildMemberAdd", member => {
     var canale = client.channels.cache.get("984354539555659827")
     canale.setName("Members: " + member.guild.memberCount)
 })
+
 client.on("guildMemberRemove", member => {
     var canale = client.channels.cache.get("984354539555659827")
     canale.setName("Members: " + member.guild.memberCount)
 })
 
-client.on("messageCreate", (message) => {
+client.on("message", (message) => {
     if (message.content == "!serverinfo") {
              var sever = message.member.guild;
 
