@@ -70,7 +70,7 @@ client.on("guildMemberRemove", member => {
     canale.setName("Members: " + member.guild.memberCount)
 })
 
-client.on("message", (message) => {
+client.on("messageCreate", (message) => {
     if (message.content == "!serverinfo") {
             var server = message.member.guild;
             var embed = new Discord.MessageEmbed()
