@@ -79,5 +79,7 @@ client.on("messageCreate", (message) => {
                      .setThumbnail(server.iconURL())
                      .addField("Owner", server.owner.user.username, true)
                      .addField("Server", server.id, true)
+
+            message.channel.send(embed)
     }
 })
