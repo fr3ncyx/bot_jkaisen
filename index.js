@@ -3,8 +3,6 @@ const client = new Discord.Client(
     { intents:["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_SCHEDULED_EVENTS", "GUILD_PRESENCES", "GUILD_PRESENCES", "GUILD_EMOJIS_AND_STICKERS","GUILD_EMOJIS_AND_STICKERS", "DIRECT_MESSAGES", "DIRECT_MESSAGES"] }
 )
 
-const Discord = require('discord.js');
-
 module.exports = {
     name: "user-info",
     data: {
