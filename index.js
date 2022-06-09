@@ -54,10 +54,10 @@ function oraAttuale() {
     var minutes = new Date().getMinutes();
 
     var canale = client.channels.cache.get("956662480875159646")
-    if (hour == 6 && minutes == 55) {
+    if (hour == 7 && minutes == 2) {
         canale.send("Notifica")
 
-    if (canale.content == "Notifica") {
+    if (canale.send("Notifica")) {
         var embed = new Discord.MessageEmbed()
             .setColor("#ff0000")
             .setTitle("Jkaisen")
