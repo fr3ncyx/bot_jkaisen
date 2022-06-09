@@ -6,12 +6,12 @@ const client = new Discord.Client(
 client.on("messageCreate", (message) => {
     if (message.content.startsWith("!userinfo2")) {
         if (message.content == "!userinfo2") {
-             utente = message.member;
-             user = message.member;
+            var utente = message.member;
+            var user = message.member;
         }
         else {
-             utente = message.mentions.members.first();
-             user = message.mentions.members.first();
+            var utente = message.mentions.members.first();
+            var user = message.mentions.members.first();
         }
 
         if (!utente) {
