@@ -9,11 +9,9 @@ client.on("messageCreate", (message) => {
     if (message.content.startsWith("!userinfo2")) {
         if (message.content == "!userinfo2") {
             var utente = message.member
-            var user = message.member
         }
         else {
             var utente = message.mentions.members.first();
-            var user = message.mentions.members.first();
         }
 
         if (!utente) {
