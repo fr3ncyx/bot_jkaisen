@@ -6,12 +6,12 @@ const client = new Discord.Client(
 client.on("messageCreate", (message) => {
     if (message.content.startsWith("!userinfo2")) {
         if (message.content == "!userinfo2") {
-            var utente = message.member;
-            var user = message.member;
+            var utente = message.member
+            var user = message.member
         }
         else {
-            var utente = message.mentions.members.first();
-            var user = message.mentions.members.first();
+            var utente = message.mentions.members.first()
+            var user = message.mentions.members.first()
         }
 
         if (!utente) {
@@ -21,18 +21,19 @@ client.on("messageCreate", (message) => {
 
         var elencoPermessi = "";
         if (utente.permissions.has("ADMINISTRATOR")) {
-            elencoPermessi = "👑 ADMINISTRATOR";
+            elencoPermessi = "👑 ADMINISTRATOR"
         }
         else {
              var permessi = ["CREATE_INSTANT_INVITE", "KICK_MEMBERS", "BAN_MEMBERS", "MANAGE_CHANNELS", "MANAGE_GUILD", "ADD_REACTIONS", "VIEW_AUDIT_LOG", "PRIORITY_SPEAKER", "STREAM", "VIEW_CHANNEL", "SEND_MESSAGES", "SEND_TTS_MESSAGES", "MANAGE_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "READ_MESSAGE_HISTORY", "MENTION_EVERYONE", "USE_EXTERNAL_EMOJIS", "VIEW_GUILD_INSIGHTS", "CONNECT", "SPEAK", "MUTE_MEMBERS", "DEAFEN_MEMBERS", "MOVE_MEMBERS", "USE_VAD", "CHANGE_NICKNAME", "MANAGE_NICKNAMES", "MANAGE_ROLES", "MANAGE_WEBHOOKS"]
 
             for (var i = 0; i < permessi.length; i++) {
                 if (utente.permissions.has(permessi[i])) {
-                    elencoPermessi += "- " + permessi[i] + "\r";
+                    elencoPermessi += "- " + permessi[i] + "\r"
                 }
             }
         }
 
+        var user = message.mentions.members.first()
         var embed = new Discord.MessageEmbed()
             .setTitle(utente.user.tag)
             .setDescription("Tutte le info di questo utente")
@@ -48,7 +49,7 @@ client.on("messageCreate", (message) => {
         message.channel.send({embeds: [embed] })
 
     }
-});
+})
 
 client.login(process.env.token)
 
