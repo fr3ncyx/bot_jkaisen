@@ -11,10 +11,10 @@ client.on("message", (message) => {
 client.on("messageCreate", message => {
     if (message.content.startsWith("!userinfo")) {
         if (message.content == "!userinfo") {
-            let utente = message.member
+            let utente = message.member;
         }
         else {
-            let utente = message.member.first()
+            let utente = message.member.first();
         }
         if (!utente) {
             return message.channel.send("Non ho trovato questo utente")
