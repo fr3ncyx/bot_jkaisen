@@ -4,10 +4,6 @@ const client = new Discord.Client(
 )
 client.login(process.env.token)
 
-client.on("message", (message) => {
-
-})
-
 client.on("messageCreate", message => {
     if (message.content.startsWith("!userinfo")) {
         if (message.content == "!userinfo") {
