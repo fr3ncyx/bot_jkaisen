@@ -16,10 +16,6 @@ client.on("messageCreate", message => {
         else {
             let utente = message.member.first();
         }
-        if (!utente) {
-            return message.channel.send("Non ho trovato questo utente")
-        }
-        let elencoPermessi = ""
         if (utente.permissions.has("ADMINISTRATOR")) {
             elencoPermessi = "👑 ADMINISTRATOR";
         }
