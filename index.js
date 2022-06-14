@@ -30,7 +30,7 @@ client.on("messageCreate", message => {
             for (let i = 0; i < permessi.length; i++)
                 if (utente.permissions.has(permessi[i]))
                     elencoPermessi += `- ${permessi[i]}\n`
-        }
+        
         let embed = new Discord.MessageEmbed()
             .setTitle(utente.user.tag)
             .setDescription("Tutte le info di questo utente")
@@ -43,6 +43,7 @@ client.on("messageCreate", message => {
             .addField("Permissions", elencoPermessi)
             .addField("Roles", utente.roles.cache.map(ruolo => ruolo.name).join("\n"))
         message.channel.send({ embeds: [embed] })
+        }
     }
 })
 
