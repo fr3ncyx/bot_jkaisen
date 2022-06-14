@@ -4,6 +4,12 @@ const client = new Discord.Client(
 )
 client.login(process.env.token)
 
+client.on("guildMemberAdd", member => {
+    if (member.user.bot) return
+
+    member.roles.add("986317278129840168");
+});
+
 client.on("messageCreate", message => {
     if (message.content.startsWith("!userinfo")) {
         if (message.content == "!userinfo") {
