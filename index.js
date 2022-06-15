@@ -125,20 +125,20 @@ client.on("message", message => {
 
                         reaction1.on("collect", (r, u) => {
                             var utente = message.guild.members.cache.find(x => x.id == u.id);
-                            utente.roles.add("")
+                            utente.roles.add("986534264000638976")
                         })
                         reaction2.on("collect", (r, u) => {
                             var utente = message.guild.members.cache.find(x => x.id == u.id);
-                            utente.roles.add("")
+                            utente.roles.add("986534362399002674")
                         })
 
                         reaction1.on("remove", (r, u) => {
                             var utente = message.guild.members.cache.find(x => x.id == u.id);
-                            utente.roles.remove("")
+                            utente.roles.remove("986534264000638976")
                         })
                         reaction2.on("remove", (r, u) => {
                             var utente = message.guild.members.cache.find(x => x.id == u.id);
-                            utente.roles.remove("")
+                            utente.roles.remove("986534362399002674")
                         })
 
                         reaction2.on("end", (r, u) => {
