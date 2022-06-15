@@ -83,7 +83,7 @@ client.on("messageCreate", (message)  => {
 
     message.channel.send({embeds: [embed] })
         .then(msg => {
-            msg.react(":thumbsup: ")
+            msg.react("👍")
             msg.react("👎")
         })
     }
@@ -95,7 +95,7 @@ client.on("messageReactionAdd", async function(messageReaction, user ) {
     if(messageReaction.message.partial) await messageReaction.message.fetch();
 
     if(messageReaction.message.id == "986534787944693780") {
-        if(messageReaction.emoji.name == ":thumbsup: ") {
+        if(messageReaction.emoji.name == "👍") {
             var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
             utente.roles.add("986534264000638976");
         }
