@@ -106,11 +106,9 @@ client.on("messageReactionAdd", async function(messageReaction, user ) {
     }
 })
 setInterval(function () {
-    //Counter dei membri nel server
     const canale = client.channels.cache.get("986540074290249748");
     canale.setName(`👾│members: ${canale.guild.memberCount}`);
 
-    //Counter dei membri con un ruolo specifico nel server
     const canale2 = client.channels.cache.get("986540368126439424");
-    canale2.setName(`👾│members: ${canale2.guild.roles.cache.get("986317278129840168").members.cache.size}`); //Settare ruolo
+    canale2.setName(`👾│members: ${canale2.guild.roles.cache.get("986317278129840168").members.cache.size}`);
 }, 1000 * 60 * 5)
