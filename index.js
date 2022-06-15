@@ -104,4 +104,47 @@ client.on("messageReactionAdd", async function(messageReaction, user ) {
             utente.roles.add("986534264000638976");
         }
     }
+});
+
+client.on("message", message => {
+    if (message.content == "!ruoli") {
+        var embed = new Discord.MessageEmbed()
+            .setTitle("Reaction roles")
+            .setDescription("Clicca sulle reazione per ottenere i ruoli")
+
+        message.channel.send(embed)
+            .then(msg => {
+                msg.react("🤟")
+                msg.react("🖐️")
+                    .then(r => {
+                        const filter1 = (reaction, user) => reaction.emoji.name == "🤟" && user.id == message.author.id; 
+                        const filter2 = (reaction, user) => reaction.emoji.name == "🖐️" && user.id == message.author.id;
+
+                        const reaction1 = msg.createReactionCollector(filter1, { dispose: true, time: 20000 }) 
+                        const reaction2 = msg.createReactionCollector(filter2, { dispose: true, time: 20000 })
+
+                        reaction1.on("collect", (r, u) => {
+                            var utente = message.guild.members.cache.find(x => x.id == u.id);
+                            utente.roles.add("")
+                        })
+                        reaction2.on("collect", (r, u) => {
+                            var utente = message.guild.members.cache.find(x => x.id == u.id);
+                            utente.roles.add("")
+                        })
+
+                        reaction1.on("remove", (r, u) => {
+                            var utente = message.guild.members.cache.find(x => x.id == u.id);
+                            utente.roles.remove("")
+                        })
+                        reaction2.on("remove", (r, u) => {
+                            var utente = message.guild.members.cache.find(x => x.id == u.id);
+                            utente.roles.remove("")
+                        })
+
+                        reaction2.on("end", (r, u) => {
+                            message.channel.send("Tempo scaduto!!")
+                        })
+                    })
+            })
+    }
 })
