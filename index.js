@@ -96,7 +96,8 @@ client.on("messageCreate", (message)  => {
 
     message.channel.send({embeds: [embed] })
         .then(msg => {
-            msg.react("")
+            msg.react("👍")
+            msg.react("👎")
         })
     }
 })
