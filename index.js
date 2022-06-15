@@ -106,7 +106,7 @@ client.on("messageReactionAdd", async function(messageReaction, user ) {
     }
 });
 
-client.on("message", message => {
+client.on("messageCreate", message => {
     if (message.content == "!ruoli") {
         var embed = new Discord.MessageEmbed()
             .setTitle("Reaction roles")
