@@ -94,7 +94,7 @@ client.on("messageReactionAdd", async function(messageReaction, user ) {
 
     if(messageReaction.message.partial) await messageReaction.message.fetch();
 
-    if(messageReaction.message.id == "986537914689265714") {
+    if(messageReaction.message.id == "986546558898151545") {
         if(messageReaction.emoji.name == "👍") {
             var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
             utente.roles.add("986534264000638976");
