@@ -60,7 +60,7 @@ function oraAttuale() {
     var embed = new Discord.MessageEmbed()
             .setColor("#ff0000")
             .setTitle("Jkaisen")
-            .setDescription(`${message.author.username} ecco a te il link discord: https://discord.gg/Pkhx88T3Z4 `)
+            .setDescription(` ecco a te il link discord: https://discord.gg/Pkhx88T3Z4 `)
             .setThumbnail("https://lh3.googleusercontent.com/MTyHWidhk1Uu0yHSZzoTpMUG4ZoCXOdhY2qqjcK8OOfsMh4yjAUF3uigIZ6XFZENH2DfDQ=s99")
             .setTimestamp()
             .addField("Titolo1" , "Contenuto1", false)
@@ -72,7 +72,7 @@ function oraAttuale() {
     }
     
     var canale = client.channels.cache.get("956662480875159646")
-    if (hour == 7 && minutes == 18) {
+    if (hour == 7 && minutes == 20) {
         canale.send(embed)
     }
 }
