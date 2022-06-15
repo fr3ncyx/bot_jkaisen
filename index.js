@@ -112,7 +112,7 @@ client.on("messageCreate", message => {
             .setTitle("Reaction roles")
             .setDescription("Clicca sulle reazione per ottenere i ruoli")
 
-        message.channel.send(embed)
+        message.channel.send({embeds: [embed] })
             .then(msg => {
                 msg.react("🤟")
                 msg.react("🖐️")
