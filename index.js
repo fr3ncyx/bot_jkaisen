@@ -114,12 +114,12 @@ client.on("messageCreate", (message) => {
     if (message.content == "!cp") {
         var embed = new Discord.MessageEmbed()
             .setColor("#ff0000")
-            .setTitle("Prezzo cp")
-            .setDescription(`Ecco qui i prezzi dei cp `)
-            .setTimestamp()
-            .addField("Titolo1" , "Contenuto1", false)
-            .addField("Titolo2" , "Contenuto2", true)
-            .addField("Titolo3" , "Contenuto3", false)
+            .setTitle("丨CP SHOP - THE DESTROYERSKAISEN丨")
+            .setDescription(`Qui puoi trovare CP (punti COD) a prezzi molto più bassi rispetto al listino base. Fino al 60% in meno. Se vuoi ordinare o ricevere assistenza, apri un ticket nel canale 𝐒𝐮𝐩𝐩𝐨𝐫𝐭. `)
+            .addField("" , " 3700CP - 20€", false)
+            .addField("" , " 7400CP - 35€", true)
+            .addField("" , " 11.000CP - 50€", false)
+            .addField("" , " 25.700CP - 100€", true)
 
         message.channel.send({embeds: [embed] })
     }
