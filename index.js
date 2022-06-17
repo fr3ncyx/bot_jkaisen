@@ -116,10 +116,11 @@ client.on("messageCreate", (message) => {
             .setColor("#ff0000")
             .setTitle("丨CP SHOP - THE DESTROYERSKAISEN丨")
             .setDescription(`Qui puoi trovare CP (punti COD) a prezzi molto più bassi rispetto al listino base. Fino al 60% in meno. Se vuoi ordinare o ricevere assistenza, apri un ticket nel canale 𝐒𝐮𝐩𝐩𝐨𝐫𝐭. `)
-            .addField("" , " 3700CP - 20€", false)
-            .addField("" , " 7400CP - 35€", true)
-            .addField("" , " 11.000CP - 50€", false)
-            .addField("" , " 25.700CP - 100€", true)
+            .setThumbnail("https://lh3.googleusercontent.com/MEbR9yl4_wmq-XucAkAIh3IT01HhQ9-yw--pXZC1ztmU1ULj4Noy5qWlJAYetIiQlSUbkqk=s151")
+            .addField("" , "1°> 3700CP - 20€", false)
+            .addField("" , "2°> 7400CP - 35€", true)
+            .addField("" , "3°> 11.000CP - 50€", false)
+            .addField("" , "4°> 25.700CP - 100€", true)
 
         message.channel.send({embeds: [embed] })
     }
