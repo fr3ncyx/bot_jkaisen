@@ -106,45 +106,21 @@ client.on("messageReactionAdd", async function(messageReaction, user ) {
     }
 });
 
-client.on("messageCreate", message => {
-    if (message.content == "!ruoli") {
+client.on("messageCreate", (message) => {
+    if (message.content == "!ciao") {
+        message.channel.send("ciao anche a te")
+    }
+   
+    if (message.content == "!cp") {
         var embed = new Discord.MessageEmbed()
-            .setTitle("Reaction roles")
-            .setDescription("Clicca sulle reazione per ottenere i ruoli")
+            .setColor("#ff0000")
+            .setTitle("Prezzo cp")
+            .setDescription(`Ecco qui i prezzi dei cp `)
+            .setTimestamp()
+            .addField("Titolo1" , "Contenuto1", false)
+            .addField("Titolo2" , "Contenuto2", true)
+            .addField("Titolo3" , "Contenuto3", false)
 
         message.channel.send({embeds: [embed] })
-            .then(msg => {
-                msg.react("🤟")
-                msg.react("🖐️")
-                    .then(r => {
-                        const filter1 = (reaction, user) => reaction.emoji.name == "🤟" && user.id == message.author.id; 
-                        const filter2 = (reaction, user) => reaction.emoji.name == "🖐️" && user.id == message.author.id;
-
-                        const reaction1 = msg.createReactionCollector(filter1, { dispose: true, time: 20000 }) 
-                        const reaction2 = msg.createReactionCollector(filter2, { dispose: true, time: 20000 })
-
-                        reaction1.on("collect", (r, u) => {
-                            var utente = message.guild.members.cache.find(x => x.id == u.id);
-                            utente.roles.add("986534264000638976")
-                        })
-                        reaction2.on("collect", (r, u) => {
-                            var utente = message.guild.members.cache.find(x => x.id == u.id);
-                            utente.roles.add("986534362399002674")
-                        })
-
-                        reaction1.on("remove", (r, u) => {
-                            var utente = message.guild.members.cache.find(x => x.id == u.id);
-                            utente.roles.remove("986534264000638976")
-                        })
-                        reaction2.on("remove", (r, u) => {
-                            var utente = message.guild.members.cache.find(x => x.id == u.id);
-                            utente.roles.remove("986534362399002674")
-                        })
-
-                        reaction2.on("end", (r, u) => {
-                            message.channel.send("Tempo scaduto!!")
-                        })
-                    })
-            })
     }
-})
+});
