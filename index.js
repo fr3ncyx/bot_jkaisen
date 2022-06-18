@@ -75,16 +75,6 @@ function oraAttuale() {
 }
 setInterval(oraAttuale, 1000*60);
 
-client.on("guildMemberAdd", member => {
-    var canale = client.channels.cache.get("984354539555659827")
-    canale.setName("Members: " + member.guild.memberCount)
-})
-
-client.on("guildMemberRemove", member => {
-    var canale = client.channels.cache.get("984354539555659827")
-    canale.setName("Members: " + member.guild.memberCount)
-});
-
 client.on("messageCreate", (message)  => {
     if (message.content == "!autoroles") {
         var embed = new Discord.MessageEmbed()
