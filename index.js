@@ -114,7 +114,7 @@ client.on("guildMemberAdd", member => {
     if(member.user.bot) return
     var embed = new Discord.MessageEmbed()
         .setFooter({text: "Djkaisen"})
-        .setImage("https://lh3.googleusercontent.com/2kKwxUgksWvbI8c9636657G4v7EQmQJRS7H-HDq2UOzdzBgkIciFXUOrJG_fN1s60EyeJpY=s85")
+        .setImage("https://cdn.discordapp.com/attachments/926429282752946176/985201546411245619/IMG_20220611_171904.jpg")
         .setDescription(`Ciao ${member.toString()}, benvenuto nel server Djkaisen. test <#987775840009994253>`)
  
     client.channels.cache.get("987827065610960897").send({embeds: [embed]});
