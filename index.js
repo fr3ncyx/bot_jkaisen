@@ -135,4 +135,5 @@ client.on("messageCreate", (message) => {
             .addField("Price" , "3°> €20 - 3700 CP", false)
 
         message.channel.send({embeds: [embed] })
+    }
 });
