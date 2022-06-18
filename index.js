@@ -9,7 +9,7 @@ client.login(process.env.token)
 client.on("guildMemberAdd", member => {
     if (member.user.bot) return
 
-    member.roles.add("986317278129840168");
+    member.roles.add("987828808709185566");
 });
 
 client.on("ready", () => {
