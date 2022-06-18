@@ -10,6 +10,14 @@ client.on("guildMemberAdd", member => {
     if (member.user.bot) return
 
     member.roles.add("987828808709185566");
+
+    if(member.user.bot) return
+    var embed = new Discord.MessageEmbed()
+        .setFooter({text: "Djkaisen"})
+        .setImage("https://lh3.googleusercontent.com/2kKwxUgksWvbI8c9636657G4v7EQmQJRS7H-HDq2UOzdzBgkIciFXUOrJG_fN1s60EyeJpY=s85")
+        .setDescription(`Ciao ${member.toString()}, benvenuto nel server Djkaisen. test <#987775840009994253>`)
+ 
+    client.channels.cache.get("987827065610960897").send({embeds: [embed]});
 });
 
 client.on("ready", () => {
