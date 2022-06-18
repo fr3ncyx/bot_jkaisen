@@ -111,17 +111,28 @@ client.on("messageCreate", (message) => {
         message.channel.send("ciao anche a te")
     }
    
-    if (message.content == "!cp") {
+    if (message.content == "!cpita") {
         var embed = new Discord.MessageEmbed()
             .setColor("#ff0000")
             .setTitle("丨CP SHOP - THE DESTROYERSKAISEN")
             .setDescription("Qui puoi trovare CP (punti COD) a prezzi molto più bassi rispetto al listino base. Fino al 60% in meno. Se vuoi ordinare o ricevere assistenza, apri un ticket nel canale 𝐒𝐮𝐩𝐩𝐨𝐫𝐭.")
             .setThumbnail("https://lh3.googleusercontent.com/MEbR9yl4_wmq-XucAkAIh3IT01HhQ9-yw--pXZC1ztmU1ULj4Noy5qWlJAYetIiQlSUbkqk=s151")
-            .addField("Prezzo" , "1°>3700CP - 20€", false)
-            .addField("Prezzo" , "2°> 7400CP - 35€", true)
-            .addField("Prezzo" , "3°> 11.000CP - 50€", false)
-            .addField("Prezzo" , "4°> 25.700CP - 100€", true)
+            .addField("Prezzo" , "1°> €10 - 1300 CP", false)
+            .addField("Prezzo" , "2°> €15 - 2400 CP", true)
+            .addField("Prezzo" , "3°> €20 - 3700 CP", false)
 
         message.channel.send({embeds: [embed] })
     }
+
+    if(message.content == "!cpeng") {
+        var embed = new Discord.MessageEmbed()
+            .setColor("#ff0000")
+            .setTitle("丨CP SHOP - THE DESTROYERSJKAISEN")
+            .setDescription("Here you can find CPs (COD Points) at the lowest price possible. Up to 60% less than normal price. If you want to order to to receive support, open a ticket in the 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 channel.")
+            .setThumbnail("https://lh3.googleusercontent.com/MEbR9yl4_wmq-XucAkAIh3IT01HhQ9-yw--pXZC1ztmU1ULj4Noy5qWlJAYetIiQlSUbkqk=s151")
+            .addField("Price" , "1°> €10 - 1300 CP", false)
+            .addField("Price" , "2°> €15 - 2400 CP", true)
+            .addField("Price" , "3°> €20 - 3700 CP", false)
+
+        message.channel.send({embeds: [embed] })
 });
