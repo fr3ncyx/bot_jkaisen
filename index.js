@@ -89,27 +89,7 @@ client.on("messageCreate", (message)  => {
     }
 })
 
-client.on("messageReactionAdd", async function(messageReaction, user ) {
-    if(user.bot) return
-
-    if(messageReaction.message.partial) await messageReaction.message.fetch();
-
-    if(messageReaction.message.id == "986546558898151545") {
-        if(messageReaction.emoji.name == "👍") {
-            var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
-            utente.roles.add("986534264000638976");
-        }
-        if(messageReaction.emoji.name == "👎") {
-            var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
-            utente.roles.add("986534264000638976");
-        }
-    }
-});
-
 client.on("messageCreate", (message) => {
-    if (message.content == "!ciao") {
-        message.channel.send("ciao anche a te")
-    }
    
     if (message.content == "!cpita") {
         var embed = new Discord.MessageEmbed()
