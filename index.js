@@ -31,9 +31,11 @@ client.on("messageCreate", message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if(!client.commands.has(command)) return
+    if(!client.commands.has(command) && !client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(command))) return
 
-    client.commands.get(command).execute(message, args);
+    var comando = client.commands.get(command) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(command))
+
+    comando.execute(message, args);
 })
 
 client.on("guildMemberAdd", member => {
