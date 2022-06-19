@@ -1,3 +1,5 @@
+const Discord = require("discord.js")
+
 module.exports = {
     name: "test1",
     description: "Comando di test1",
