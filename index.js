@@ -35,6 +35,13 @@ client.on("messageCreate", message => {
 
     var comando = client.commands.get(command) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(command))
 
+    if (comando.onlyStaff) {
+        if (message.member.permissions.has("ADMINISTRATOR")) {
+            message.channel.send("Non hai il permesso di eseguire")
+            return
+        }
+    }
+
     comando.execute(message, args);
 })
 
