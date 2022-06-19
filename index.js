@@ -116,8 +116,4 @@ client.on("guildMemberAdd", member => {
         .setDescription(`Ciao ${member.toString()}, benvenuto nel server Djkaisen. test <#987775840009994253>`)
  
     client.channels.cache.get("987827065610960897").send({embeds: [embed]});
-    
-    if(member.user.bot) return
-    var canale = client.channels.cache.get("987827065610960897")
-    canale.send(`Benvenuto ${member.toString()} nel server dei DestroyersJkaisen`)
 })
