@@ -45,12 +45,10 @@ client.on("messageCreate", (message) => {
     if (message.content == "!team") {
         var embed = new Discord.MessageEmbed()
             .setColor("#ff0000")
-            .setTitle("Jkaisen")
+            .setTitle("DestroyersJkaisen")
             .setDescription(`${message.author.username} ecco a te il link discord: https://discord.gg/Pkhx88T3Z4 `)
-            .setThumbnail("https://lh3.googleusercontent.com/MTyHWidhk1Uu0yHSZzoTpMUG4ZoCXOdhY2qqjcK8OOfsMh4yjAUF3uigIZ6XFZENH2DfDQ=s99")
             .setTimestamp()
             .addField("Titolo1" , "Contenuto1", false)
-            .addField("Titolo2" , "Contenuto2", true)
 
         message.channel.send({embeds: [embed] })
     }
@@ -118,4 +116,8 @@ client.on("guildMemberAdd", member => {
         .setDescription(`Ciao ${member.toString()}, benvenuto nel server Djkaisen. test <#987775840009994253>`)
  
     client.channels.cache.get("987827065610960897").send({embeds: [embed]});
+    
+    if(member.user.bot) return
+    var canale = client.channels.cache.get("987827065610960897")
+    canale.send(`Benvenuto ${member.toString()} nel server dei DestroyersJkaisen`)
 })
