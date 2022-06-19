@@ -146,3 +146,5 @@ client.on("guildMemberAdd", member => {
  
     client.channels.cache.get("987827065610960897").send({embeds: [embed]});
 })
+
+global.nome = "Francy";
