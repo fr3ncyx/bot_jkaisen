@@ -322,8 +322,3 @@ client.on("messageCreate", message => {
     }
 });
 
-setInterval(function() {
-    const canale = 
-client.channels.cache.get("988496768897531904");
-    canale.setName(`👾│members: ${canale.guild.memberCount}`);
-}, 1000*60*5);
