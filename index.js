@@ -84,6 +84,7 @@ client.on("messageCreate", (message) => {
         var embed = new Discord.MessageEmbed()
             .setColor("#ff0000")
             .setTitle("DestroyersJkaisen")
+            .setURL("")
             .setDescription(`${message.author.username} ecco a te il link discord: https://discord.gg/Pkhx88T3Z4 `)
             .setTimestamp()
             .addField("Titolo1" , "Contenuto1", false)
@@ -157,4 +158,18 @@ client.on("guildMemberAdd", member => {
 })
 
 global.nome = "Francy";
+
+client.on("messageCreate", message => {
+    if (message.content == "!ticket") {
+        var button1 = new Discord.MessageButton()
+            .setLabel("Apri ticket")
+            .setCustomId("apriTicket")
+            .setStyle("PRIMARY")
+
+        var row = new Discord.MessageActionRow()
+            .addComponents(button1)
+
+        message.channel.send({ content: "Clicca sul bottone per aprire un ticket", components: [row] })
+    }
+})
 
