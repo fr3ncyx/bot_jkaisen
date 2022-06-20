@@ -150,7 +150,7 @@ client.on("guildMemberAdd", member => {
     client.channels.cache.get("987827065610960897").send({embeds: [embed]});
 });
 
-client.on("guildMemberRemove", (member) => {
+client.on("guildMemberRemove", member => {
     if(member.user.bot) return
     var embed = new Discord.MessageEmbed()
         .setFooter({text: "Destroyerjkaisen"})
