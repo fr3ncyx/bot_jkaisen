@@ -287,5 +287,15 @@ client.on("messageCreate", message => {
             message.channel.send("Non puoi utilizzare questo comando qui")
         }
     }
-})
+});
 
+client.on("messageCreate", message => {
+    if (message.content == "!ms") {
+        let embed = new Discord.MessageEmbed()
+            .setTitle("Ping del bot")
+            .setDescription("Ecco la latenza del bot")
+            .addField("Ping", `${client.ws.ping}ms`)
+
+        message.channel.send({embeds: [embed]})
+    }
+})
