@@ -143,12 +143,24 @@ client.on("messageCreate", (message) => {
 client.on("guildMemberAdd", member => {
     if(member.user.bot) return
     var embed = new Discord.MessageEmbed()
-        .setFooter({text: "Djkaisen"})
+        .setFooter({text: "Destroyerjkaisen"})
         .setImage("https://cdn.discordapp.com/attachments/926429282752946176/985201546411245619/IMG_20220611_171904.jpg")
         .setDescription(`Ciao ${member.toString()}, benvenuto nel server Djkaisen. test <#987775840009994253>`)
  
     client.channels.cache.get("987827065610960897").send({embeds: [embed]});
 })
+
+client.on("guildMemberRemove", (member) => {
+    if(member.user.bot) return
+    var embed = new Discord.MessageEmbed()
+        .setFooter({text: "Destroyerjkaisen"})
+        .setImage("https://cdn.discordapp.com/attachments/926429282752946176/985201546411245619/IMG_20220611_171904.jpg")
+        .setDescription(`Addio ${member.toString()}, è uscito dal server . test <#988487931947778149>`)
+
+    client.channels.cache.get("988487931947778149").send({embeds: [embed]});
+})
+
+
 
 global.nome = "Francy";
 client.on("messageCreate", message => {
@@ -276,3 +288,4 @@ client.on("messageCreate", message => {
         }
     }
 })
+
