@@ -298,4 +298,15 @@ client.on("messageCreate", message => {
 
         message.channel.send({embeds: [embed]})
     }
+});
+
+client.on("messageCreate", message => {
+    if (message.content == "!ms1") {
+        let embed = new Discord.MessageEmbed()
+            .setTitle("Ping del bot")
+            .setDescription("Ecco la latenza del bot")
+            .addField("Ping", `${Discord.User.ws.ping}ms`)
+
+        message.channel.send({embeds: [embed]})
+    }
 })
