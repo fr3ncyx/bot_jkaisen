@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
 const client = new Discord.Client(
-    {intents: ["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_EMOJIS_AND_STICKERS"] } && {partials: ["MESSAGE", "CHANNEL", "REACTION"]}
+    {intents: ["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_EMOJIS_AND_STICKERS", ] }
 )
 const fs = require("fs");
 
@@ -112,14 +112,14 @@ client.on("messageCreate", (message)  => {
 })
 
 client.on("messageReactionAdd", async function (messageReaction, user) {
-    if (user.bot) return //Le reaction dei bot verranno escluse
+    if (user.bot) return 
 
     if (messageReaction.message.partial) await messageReaction.message.fetch();
 
-    if (messageReaction.message.id == "988499318342287370") { //Settare id messaggio
+    if (messageReaction.message.id == "988499318342287370") {
         if (messageReaction._emoji.name == "👍") {
             var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
-            utente.roles.add("988499438106460160"); //Settare ruolo
+            utente.roles.add("988499438106460160");
         }
         if (messageReaction._emoji.name == "👎") {
             var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
@@ -127,7 +127,7 @@ client.on("messageReactionAdd", async function (messageReaction, user) {
         }
     }
 })
-//Quando viene rimossa una reazione
+
 client.on("messageReactionRemove", async function (messageReaction, user) {
     if (user.bot) return
 
