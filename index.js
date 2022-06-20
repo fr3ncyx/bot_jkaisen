@@ -166,3 +166,34 @@ client.on("messageCreate", message => {
     }
 })
 
+client.on("interactionCreate", interaction => {
+    if (interaction.customId == "apriTicket") {
+        interaction.deferUpdate()
+        if (interaction.guild.channels.cache.find(canale => canale.topic == `User ID: ${interaction.user.id}`)) {
+            interaction.user.send("Hai gia un ticket aperto").catch(() => { })
+            return
+        }
+        interaction.guild.channels.create(interaction.user.username, {
+            type: "text",
+            topic: `User ID: ${interaction.user.id}`,
+            parent: "988403548360425472", //Settare la categoria,
+            permissionOverwrites: [
+                {
+                    id: interaction.guild.id,
+                    deny: ["VIEW_CHANNEL"]
+                },
+                {
+                    id: interaction.user.id,
+                    allow: ["VIEW_CHANNEL"]
+                },
+                { //Aggiungere altri "blocchi" se si vogliono dare permessi anche a ruoli o utenti
+                    id: "987828808709185566",
+                    allow: ["VIEW_CHANNEL"]
+                }
+            ]
+        }).then(canale => {
+            canale.send("Grazie per aver aperto un ticket")
+        })
+    }
+})
+
