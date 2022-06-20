@@ -320,4 +320,10 @@ client.on("messageCreate", message => {
             setTimeout(() => msg.delete(), 5000)
         })
     }
-})
+});
+
+setInterval(function() {
+    const canale = 
+client.channels.cache.get("988496768897531904");
+    canale.setName(`👾│members: ${canale.guild.memberCount}`);
+}, 1000*60*5);
