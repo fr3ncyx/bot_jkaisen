@@ -151,7 +151,6 @@ client.on("guildMemberAdd", member => {
 })
 
 global.nome = "Francy";
-
 client.on("messageCreate", message => {
     if (message.content == "!ticket") {
         var button1 = new Discord.MessageButton()
@@ -176,7 +175,7 @@ client.on("interactionCreate", interaction => {
         interaction.guild.channels.create(interaction.user.username, {
             type: "text",
             topic: `User ID: ${interaction.user.id}`,
-            parent: "988403548360425472", //Settare la categoria,
+            parent: "987775840009994251", //Settare la categoria,
             permissionOverwrites: [
                 {
                     id: interaction.guild.id,
