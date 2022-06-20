@@ -148,7 +148,7 @@ client.on("guildMemberAdd", member => {
         .setDescription(`Ciao ${member.toString()}, benvenuto nel server Djkaisen. test <#987775840009994253>`)
  
     client.channels.cache.get("987827065610960897").send({embeds: [embed]});
-})
+});
 
 client.on("guildMemberRemove", (member) => {
     if(member.user.bot) return
