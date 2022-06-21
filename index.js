@@ -245,6 +245,13 @@ client.on("interactionCreate", interaction => {
 client.on("messageCreate", message => {
     if (message.content == "!close") {
         var topic = message.channel.topic;
+
+        if (!message.member.permissions.has("MANAGE_MESSAGES")) {
+            return message.channel.send('Non hai il permesso');
+        }
+        if (!message.guild.me.permissions.has("MANAGE_MESSAGES")) {
+            return message.channel.send('Non ho il permesso');
+        }
         if (!topic) {
             message.channel.send("Non puoi utilizzare questo comando qui");
             return
