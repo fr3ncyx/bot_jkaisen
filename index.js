@@ -206,7 +206,14 @@ client.on("messageCreate", message => {
 
         var row = new Discord.MessageActionRow()
             .addComponents(button1)
-
+    
+    if (!message.member.permissions.has("MANAGE_MESSAGES")) {
+            return message.channel.send('Non hai il permesso');
+        }
+    if (!message.guild.me.permissions.has("MANAGE_MESSAGES")) {
+            return message.channel.send('Non ho il permesso');
+           }
+    
         message.channel.send({ content: "Clicca sul bottone per aprire un ticket", components: [row] })
     }
 })
