@@ -214,8 +214,6 @@ client.on("messageCreate", message => {
         var row = new Discord.MessageActionRow()
             .addComponents(button1)
     
-
-    
         message.channel.send({ content: "Clicca sul bottone per aprire un ticket", components: [row] })
     }
 })
@@ -230,7 +228,7 @@ client.on("interactionCreate", interaction => {
         interaction.guild.channels.create(interaction.user.username, {
             type: "text",
             topic: `User ID: ${interaction.user.id}`,
-            parent: "987775840009994251", //Settare la categoria,
+            parent: "987057969449545809", //Settare la categoria,
             permissionOverwrites: [
                 {
                     id: interaction.guild.id,
@@ -241,7 +239,7 @@ client.on("interactionCreate", interaction => {
                     allow: ["VIEW_CHANNEL"]
                 },
                 { //Aggiungere altri "blocchi" se si vogliono dare permessi anche a ruoli o utenti
-                    id: "987828808709185566",
+                    id: "964853220008689694",
                     allow: ["VIEW_CHANNEL"]
                 }
             ]
