@@ -239,7 +239,7 @@ client.on("interactionCreate", interaction => {
                     allow: ["VIEW_CHANNEL"]
                 },
                 { //Aggiungere altri "blocchi" se si vogliono dare permessi anche a ruoli o utenti
-                    id: "",
+                    id: "988805178985709588",
                     allow: ["VIEW_CHANNEL"]
                 }
             ]
