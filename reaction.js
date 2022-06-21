@@ -1,6 +1,8 @@
 const Discord = require("discord.js")
 const client = new Discord.Client({partials: ["MESSAGE", "CHANNEL", "REACTION"]})
 
+client.login("OTgxNjI0MDk0Mzg0NjExMzQ4.Gq9v4Y.JLpn_Wd67Jmk37gEZGRwCr8V22V_JVW2j1z1pQ");
+
 client.on("messageCreate", (message)  => {
     if (message.content == "!autoroles") {
         var embed = new Discord.MessageEmbed()
