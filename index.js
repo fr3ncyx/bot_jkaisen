@@ -40,7 +40,7 @@ client.on("messageCreate", message => {
 
 client.on("guildMemberAdd", member => {
     if (member.user.bot) return
-    member.roles.add("987828808709185566");
+    member.roles.add("964853220008689694");
 });
 
 client.on("ready", () => {
