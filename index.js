@@ -344,9 +344,10 @@ client.on("messageCreate", message => {
 
     if(trovata) {
         message.delete();
+        var utente = message.mentions.members.first();
         var embed = new Discord.MessageEmbed()
             .setTitle("Parola probita")
-            .setDescription("hai scritto una parola proibita")
+            .setDescription(`${utente.toString()} hai scritto una parola proibita`)
         
         message.channel.send({embeds: [embed]})
     }
