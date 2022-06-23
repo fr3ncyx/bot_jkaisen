@@ -3,7 +3,6 @@ const client = new Discord.Client(
     {intents: ["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_EMOJIS_AND_STICKERS"] }
 )
 const fs = require("fs");
-const partials = new Discord.Client({partials: ["MESSAGE", "CHANNEL", "REACTION"]})
 
 client.login(process.env.token)
 
@@ -112,6 +111,7 @@ client.on("messageCreate", (message)  => {
     }
 })
 
+const partials = new Discord.Client({partials: ["MESSAGE", "CHANNEL", "REACTION"]})
 
 client.on("messageReactionAdd", async function (messageReaction, user) {  
     if (user.bot) return 
