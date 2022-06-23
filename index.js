@@ -331,3 +331,23 @@ client.on("messageCreate", message => {
         })
     }
 });
+
+client.on("messageCreate", message => {
+    var parolacce = ["porco dio", "cazzo", "diocane", "dio cane","merda"]
+    var trovata = false; 
+
+    parolacce.forEach(parola => {
+        if (message.content.includes(parola)) {
+             trovata = true;
+        }
+    })
+
+    if(trovata) {
+        message.delete();
+        var embed = new Discord.MessageEmbed()
+            .setTitle("Parola probita")
+            .setDescription(`${utente.toString()} hai scritto una parola proibita`)
+        
+        message.channel.send({embeds: [embed]})
+    }
+})
