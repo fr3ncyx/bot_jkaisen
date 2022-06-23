@@ -6,21 +6,6 @@ const fs = require("fs");
 
 client.login(process.env.token)
 
-client.on("messageCreate", message => {
-    const prefix = "!";
-
-    if(!message.content.startsWith(prefix) || message.author.bot) return
-
-    const args = message.content.slice(prefix.length).trim().split(/ +/);
-    const command = args.shift().toLowerCase();
-
-    if(!client.commands.has(command) && !client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(command))) return
-
-    var comando = client.commands.get(command) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(command))
-
-    comando.execute(message, args);
-})
-
 client.on("guildMemberAdd", member => {
     if (member.user.bot) return
     member.roles.add("964853220008689694");
