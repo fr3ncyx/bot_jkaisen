@@ -22,6 +22,6 @@ module.exports = class UserInfoCommand extends Commando.Command {
         userdisplayAvatarURL()
       )
       execute(message)
-      channel.send(embed)
+      channel.send({embeds: [embed] })
     }  
   }

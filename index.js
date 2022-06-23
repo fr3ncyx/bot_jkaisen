@@ -23,7 +23,7 @@ client.on("messageCreate", message => {
 
     if(!client.commands.has(command)) return
 
-    client.commands.get(command).execute(message)
+    client.commands.get(command).execute(Discord.Message)
 })
 
 client.on("guildMemberAdd", member => {
