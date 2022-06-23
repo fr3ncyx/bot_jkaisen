@@ -5,7 +5,7 @@ module.exports = class UserInfoCommand extends Commando.Command {
     constructor(client) {
         super(client, {
             name: 'userinfo',
-            group: 'misc',
+            group: 'commands',
             memberName: 'userinfo',
             descrtption: 'info riguardo questo utente'
         })
@@ -21,7 +21,7 @@ module.exports = class UserInfoCommand extends Commando.Command {
         `Info utente di ${user.username}`,
         userdisplayAvatarURL()
       )
-
+      execute(message)
       channel.send(embed)
     }  
   }
