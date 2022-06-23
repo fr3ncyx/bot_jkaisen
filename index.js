@@ -19,6 +19,16 @@ client.on("messageCreate" , (message) => {
     if (message.content == "!teamtag") {
         message.author.send("Djk (provvisorio)" + message.author.toString())
     }
+});
+
+client.on("messageCreate", message => {
+    var embed = new Discord.MessageEmbed()
+    .setTitle("Test")
+    .setDescription("Djk")
+
+    if (message.content == "!tag") {
+        message.author.send({embeds: [embed]})
+    }
 })
 
 client.on("messageCreate" , (message) => {
