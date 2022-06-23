@@ -317,7 +317,7 @@ client.on("messageCreate", message => {
         if (!count) {
             return message.channel.send("Inserisci un numero valido")
         }
-        if (count > 100) {
+        if (count > 200) {
             return message.channel.send("Non puoi cancellare più di 100 messaggi")
         }
         message.channel.bulkDelete(count, true)
