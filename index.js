@@ -366,7 +366,8 @@ client.on("messageCreate", message => {
             }
         }
 
-        var utente = message.mentions.members.first();
+        var user = Discord.GuildMember
+        var utente = message.mentions.members.first()
         var embed = new Discord.MessageEmbed()
             .setTitle(utente.user.tag)
             .setDescription("Tutte le info di questo utente")
