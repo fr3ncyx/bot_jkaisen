@@ -349,4 +349,3 @@ client.on("messageCreate", message => {
         })
     }
 });
-
