@@ -111,10 +111,11 @@ client.on("messageCreate", (message)  => {
     }
 })
 
-var partials = {partials: ["MESSAGE", "CHANNEL", "REACTION"]}    
-client.on("messageReactionAdd", async function (messageReaction, user) {
+ 
+client.on("messageReactionAdd", async function (messageReaction, user) {  
     if (user.bot) return 
 
+    var partials = {partials: ["MESSAGE", "CHANNEL", "REACTION"]}   
     if (messageReaction.message.partial) await messageReaction.message.fetch();
 
     if (messageReaction.message.id == "989541581663142008") {
