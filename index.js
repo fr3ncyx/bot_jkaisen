@@ -111,7 +111,7 @@ client.on("messageCreate", (message)  => {
     }
 })
 
-const partials = new Discord.Client({partials: ["MESSAGE", "CHANNEL", "REACTION"]})
+var partials = new Discord.Client({partials: ["MESSAGE", "CHANNEL", "REACTION"]})
 
 client.on("messageReactionAdd", async function (messageReaction, user) {  
     if (user.bot) return 
