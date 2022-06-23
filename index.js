@@ -1,27 +1,10 @@
 const Discord = require("discord.js")
 const client = new Discord.Client(
-    {intents: ["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_EMOJIS_AND_STICKERS"] }
+    {intents: ["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_EMOJIS_AND_STICKERS"]}
 )
 const fs = require("fs");
 
 client.login(process.env.token)
-
-client.commands = new Discord.Collection();
-
-const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith(".js"));
-for(const file of commandFiles) {
-    var command = require(`./commands/${file}`);
-    client.commands.set(command.name, command);
-}
-
-const commandsFolder = fs.readdirSync("./commands");
-for (const folder of commandsFolder) {
-    const commandsFiles = fs.readdirSync(`./commands/${folder}`).filter(file => file.endsWith(".js"));
-    for (const file of commandsFiles) {
-        const command = require(`./commands/${folder}/${file}`);
-        client.commands.set(command.name, command);
-    }
-}
 
 client.on("messageCreate", message => {
     const prefix = "!";
@@ -111,7 +94,7 @@ client.on("messageCreate", (message)  => {
     }
 })
 
-client.on("messageReactionAdd", async function (messageReaction, user) {  
+client.on("messageReactionAdd", async function (messageReaction, user) {
     if (user.bot) return 
 
     if (messageReaction.message.partial) await messageReaction.message.fetch();
