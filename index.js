@@ -78,7 +78,7 @@ client.on("messageCreate", message => {
 
 client.on("messageCreate", message => {
     if (message.content == "!comando") {
-        message.channel.send(`${userInfo} ciao`);
+        message.channel.send(`${Discord.User} ciao`);
     }
 })
 
