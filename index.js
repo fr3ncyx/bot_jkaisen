@@ -77,16 +77,7 @@ client.on("messageCreate", message => {
 
 client.on("messageCreate", message => {
     if (message.content == "!comando") {
-        //Taggare l'utente che scrive il comando
-        message.channel.send(message.author.toString());
-        //Taggare un utente specifico
-        message.channel.send("<@idUtente> ciao");
-        //Taggare un ruolo del server
-        message.channel.send("<@&idRuolo>");
-        //Taggare un canale
-        message.channel.send("<#idCanale>");
-        //Taggare una categoria
-        message.channel.send("<#idCategoria>");
+        message.channel.send(`<@idUtente> ciao`);
     }
 })
 
