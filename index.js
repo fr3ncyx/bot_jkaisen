@@ -76,12 +76,6 @@ client.on("messageCreate", message => {
     }
 })
 
-client.on("messageCreate", message => {
-    if (message.content == "!comando") {
-        message.channel.send(`${Discord.User} ciao`);
-    }
-})
-
 client.on("messageCreate" , (message) => {
     if (message.content == "!test") {
         message.channel.send("Ciao" + " " + message.author.toString())
@@ -396,5 +390,16 @@ client.on("messageCreate", message => {
             .setDescription(`Hai scritto una parola proibita`)
         
         message.channel.send({embeds: [embed]})
+    }
+})
+
+client.on("messageCreate", message => {
+    var canaleVocale = message.member.voice.channel;
+
+    if (!canaleVocale) {
+        message.channel.send("Non sei in un canale vocale");
+    }
+    else {
+        canaleVocale.join()
     }
 })
