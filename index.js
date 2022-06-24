@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
 const client = new Discord.Client(
-    {intents: ["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_EMOJIS_AND_STICKERS"]}
+    {intents: ["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_EMOJIS_AND_STICKERS", "GUILD_INTEGRATIONS"]}
 )
 const fs = require("fs");
 
@@ -12,7 +12,13 @@ client.on("guildMemberAdd", member => {
 });
 
 client.on("ready", () => {
-    console.log("Bot online")
+    console.log("Bot online");
+
+    var server = client.guilds.cache.get("987775840009994250")
+    server.commands.create({
+        name: "ping",
+        description: "Comando slash di test"
+    })
 })
 
 client.on("messageCreate" , (message) => {
