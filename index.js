@@ -13,6 +13,21 @@ client.on("guildMemberAdd", member => {
 
 client.on("ready", () => {
     console.log("Bot online");
+
+    const guildId = "987775840009994250"
+    const guild = client.guilds.cache.get(guildId)
+    let commands
+
+    if (guild) {
+        commands = guild.commands
+    }else {
+        commands = client.application?.commands
+    }
+
+    commands?.create({
+        name: 'ping',
+        descrption: 'Rispondi con pong',
+    })
 })
 
 client.on("messageCreate" , (message) => {
