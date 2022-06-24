@@ -1,7 +1,7 @@
 const Discord = require("discord.js")
-const client = new Discord.Client(
-    {intents: ["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_EMOJIS_AND_STICKERS", "GUILD_INTEGRATIONS"]}
-)
+const client = new Discord.Client({
+    intents: ["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_EMOJIS_AND_STICKERS", "GUILD_INTEGRATIONS"]
+})
 const fs = require("fs");
 
 client.login(process.env.token)
@@ -22,11 +22,11 @@ client.on("ready", () => {
     })
 })
 
-client.on("interactionCreate", interaction => {
+client.on("interactionCreate",async interaction => {
     if(!interaction.isCommand()) return
 
     if(interaction.commandName == "ping") {
-        interaction.reply("Pong")
+        await interaction.reply("Pong")
     }
 })
 
