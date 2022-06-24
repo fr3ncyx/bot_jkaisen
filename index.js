@@ -80,7 +80,7 @@ client.on("messageCreate", message => {
         //Taggare l'utente che scrive il comando
         message.channel.send(message.author.toString());
         //Taggare un utente specifico
-        message.channel.send("<@idUtente>");
+        message.channel.send("<@idUtente> ciao");
         //Taggare un ruolo del server
         message.channel.send("<@&idRuolo>");
         //Taggare un canale
