@@ -13,27 +13,7 @@ client.on("guildMemberAdd", member => {
 
 client.on("ready", () => {
     console.log("Bot online");
-    console.log(interaction);
-
-    client.guilds.cache.forEach(guild => {
-        guild.commands.create({
-            name: "ping",
-            description: "Comando slash di test"
-        })     
-    })
 })
-client.on('interactionCreate', interaction => {
-	if (!interaction.isCommand()) return;
-	console.log(interaction);
-});
-
-client.on('interactionCreate', async interaction => {
-	if (!interaction.isCommand()) return;
-
-	if (interaction.commandName === 'ping') {
-		await interaction.reply({ content: 'Pong!', ephemeral: true });
-	}
-});
 
 client.on("messageCreate" , (message) => {
     if (message.content == "!teamtag") {
