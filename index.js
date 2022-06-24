@@ -59,8 +59,6 @@ client.on("messageCreate", message => {
             })
     }
 })
-
-
 client.on("messageCreate" , (message) => {
     if (message.content == "!teamtag") {
         message.author.send("Djk (provvisorio)" + message.author.toString())
@@ -74,6 +72,21 @@ client.on("messageCreate", message => {
 
     if (message.content == "!tag") {
         message.author.send({embeds: [embed]})
+    }
+})
+
+client.on("messageCreate", message => {
+    if (message.content == "!comando") {
+        //Taggare l'utente che scrive il comando
+        message.channel.send(message.author.toString());
+        //Taggare un utente specifico
+        message.channel.send("<@idUtente>");
+        //Taggare un ruolo del server
+        message.channel.send("<@&idRuolo>");
+        //Taggare un canale
+        message.channel.send("<#idCanale>");
+        //Taggare una categoria
+        message.channel.send("<#idCategoria>");
     }
 })
 
