@@ -392,14 +392,3 @@ client.on("messageCreate", message => {
         message.channel.send({embeds: [embed]})
     }
 })
-
-client.on("messageCreate", message => {
-    var canaleVocale = message.member.voice.channel;
-
-    if (!canaleVocale) {
-        message.channel.send("Non sei in un canale vocale");
-    }
-    else {
-        canaleVocale.join()
-    }
-})
