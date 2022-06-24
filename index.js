@@ -14,11 +14,20 @@ client.on("guildMemberAdd", member => {
 client.on("ready", () => {
     console.log("Bot online");
 
-    var server = client.guilds.cache.get("987775840009994250")
-    server.commands.create({
-        name: "ping",
-        description: "Comando slash di test"
+    client.guilds.cache.forEach(guild => {
+        guild.commands.create({
+            name: "ping",
+            description: "Comando slash di test"
+        })     
     })
+})
+
+client.on("interactionCreate", interaction => {
+    if(!interaction.isCommand()) return
+
+    if(interaction.commandName == "ping") {
+        interaction.reply("Siuum")
+    }
 })
 
 client.on("messageCreate" , (message) => {
