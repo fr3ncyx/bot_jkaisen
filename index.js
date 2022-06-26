@@ -61,8 +61,8 @@ client.on("messageCreate", message => {
     }
 })
 client.on("messageCreate" , (message) => {
-    if (message.content == "!teamtag" + "<@member>") {
-        message.channel.send("Djk (provvisorio)" + "<@member>")
+    if (message.content == "!teamtag") {
+        message.author.send("Djk (provvisorio)")
     }
 });
 
