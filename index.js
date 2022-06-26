@@ -114,7 +114,7 @@ function oraAttuale() {
     var minutes = new Date().getMinutes();
 
     var canale = client.channels.cache.get("984573023900278824")
-    if (hour == 15 && minutes == 15) {
+    if (hour == 15 && minutes == 17) {
         canale.send("Notifica")
     }
 }
