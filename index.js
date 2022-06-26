@@ -42,7 +42,7 @@ client.on("messageCreate", message => {
     if (message.content.startsWith("!teamtag1")) {
         let utente = message.mentions.members.first();
         let embed = new Discord.MessageEmbed()
-            .setTitle(`${utente().username}`)
+            .setTitle(`${utente()}`)
             .setDescription(`Ecco a te il tag del team`)
 
         message.channel.send({ embeds: [embed] })
