@@ -47,9 +47,6 @@ client.on("messageCreate", message => {
         if (!utente) {
             return message.channel.send('Non hai menzionato nessun utente');
         }
-        if (!utente.bannable) {
-            return message.channel.send('Io non ho il permesso');
-        }
         utente()
             .then(() => {
                 let embed = new Discord.MessageEmbed()
