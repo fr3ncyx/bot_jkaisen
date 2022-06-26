@@ -89,7 +89,7 @@ client.on("messageCreate", (message) => {
 
     if (message.content == "!embed") {
         var embed = new Discord.MessageEmbed()
-            .setTitle("Titolo embed")
+            .setTitle("<:tenero2:990574391198879765> Titolo embed")
             .setDescription(`${message.author.username} ha scritto il messaggio`)
             .setThumbnail("https://tuttoinformatico.com/wp-content/uploads/2019/10/call-of-duty-mobile-raggiunge-i-100-milioni-di-download.jpg")
 
