@@ -47,7 +47,6 @@ client.on("messageCreate", message => {
                     .setDescription(`Ecco a te il tag del team ĐK*`)
 
                 message.channel.send({ embeds: [embed] })
-                message.member.send("hello")  
             } 
         })
 
