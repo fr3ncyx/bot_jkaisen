@@ -137,9 +137,11 @@ client.on("messageCreate", (message)  => {
 client.on("messageReactionAdd", async function (messageReaction, user) {
     if (user.bot) return 
 
+    var partials = new Discord.Client({partials: ["MESSAGE", "CHANNEL", "REACTION"]})
+
     if (messageReaction.message.partial) await messageReaction.message.fetch();
 
-    if (messageReaction.message.id == "989541581663142008") {
+    if (messageReaction.message.id == "990622416734650368") {
         if (messageReaction._emoji.name == "👍") {
             var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
             utente.roles.add("988499438106460160");
