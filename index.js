@@ -44,8 +44,8 @@ client.on("messageCreate", message => {
                 let embed = new Discord.MessageEmbed()
                     .setColor("#ff0000")
                     .setTitle(`${utente.user.username}`)
-                    .setDescription(`Ecco a te il tag del team ĐK*`)
-
+                    .setDescription(`Ecco a te il tag del team ĐK*`)                    
+  
                 message.channel.send({ embeds: [embed] })
             } 
         })
