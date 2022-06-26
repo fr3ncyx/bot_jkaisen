@@ -47,8 +47,8 @@ client.on("messageCreate", message => {
         if (!utente) {
             return message.channel.send('Non hai menzionato nessun utente');
         }
-        utente.avatar()
-            .then(() => {
+        utente.manageable()
+            .then( () => {
                 let embed = new Discord.MessageEmbed()
                     .setTitle(`${utente.user.username}`)
                     .setDescription(`Ecco a te il tag del team`)
