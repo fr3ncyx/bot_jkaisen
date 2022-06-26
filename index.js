@@ -62,7 +62,7 @@ client.on("messageCreate", message => {
 })
 client.on("messageCreate" , (message) => {
     if (message.content == "!teamtag") {
-        message.author.send("Djk (provvisorio)" + message.author.toString())
+        message.author.send("Djk (provvisorio)" + message.member.toString())
     }
 });
 
