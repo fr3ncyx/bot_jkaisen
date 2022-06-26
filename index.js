@@ -61,7 +61,7 @@ client.on("messageCreate", message => {
     }
 })
 client.on("messageCreate" , (message) => {
-    if (message.content == "!teamtag" + message.member.toString()) {
+    if (message.content == "!teamtag" + member.toString()) {
         message.channel.send("Djk (provvisorio)" + message.member.toString())
     }
 });
