@@ -250,7 +250,7 @@ client.on("interactionCreate", interaction => {
             topic: `User ID: ${interaction.user.id}`,
             parent: "986769295927308378", 
         }).then(canale => {
-            canale.send("Grazie per aver aperto un ticket")
+            canale.send("Grazie per aver aperto un ticket aspetta che <@770613024129417256> ti risponda")
         })
     }
 })
