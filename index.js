@@ -172,26 +172,26 @@ client.on("messageCreate", (message) => {
    
     if (message.content == "!cpita") {
         var embed = new Discord.MessageEmbed()
-            .setColor("#ff0000")
-            .setTitle("丨CP SHOP - THE DESTROYERSKAISEN")
-            .setDescription("Qui puoi trovare CP (punti COD) a prezzi molto più bassi rispetto al listino base. Fino al 60% in meno. Se vuoi ordinare o ricevere assistenza, apri un ticket nel canale 𝐒𝐮𝐩𝐩𝐨𝐫𝐭.")
-            .setThumbnail("https://lh3.googleusercontent.com/MEbR9yl4_wmq-XucAkAIh3IT01HhQ9-yw--pXZC1ztmU1ULj4Noy5qWlJAYetIiQlSUbkqk=s151")
-            .addField("Prezzo" , "1°> €10 - 1300 CP", false)
-            .addField("Prezzo" , "2°> €15 - 2400 CP", true)
-            .addField("Prezzo" , "3°> €20 - 3700 CP", false)
+            .setColor("")
+            .setTitle("")
+            .setDescription("")
+            .setThumbnail("")
+            .addField("")
+            .addField("")
+            .addField("")
 
         message.channel.send({embeds: [embed] })
     }
 
     if(message.content == "!cpeng") {
         var embed = new Discord.MessageEmbed()
-            .setColor("#ff0000")
-            .setTitle("丨CP SHOP - THE DESTROYERSJKAISEN")
-            .setDescription("Here you can find CPs (COD Points) at the lowest price possible. Up to 60% less than normal price. If you want to order to to receive support, open a ticket in the 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 channel.")
-            .setThumbnail("https://lh3.googleusercontent.com/MEbR9yl4_wmq-XucAkAIh3IT01HhQ9-yw--pXZC1ztmU1ULj4Noy5qWlJAYetIiQlSUbkqk=s151")
-            .addField("Price" , "1°> €10 - 1300 CP", false)
-            .addField("Price" , "2°> €15 - 2400 CP", true)
-            .addField("Price" , "3°> €20 - 3700 CP", false)
+            .setColor("")
+            .setTitle("")
+            .setDescription("")
+            .setThumbnail("")
+            .addField("")
+            .addField("")
+            .addField("")
 
         message.channel.send({embeds: [embed] })
     }
@@ -203,6 +203,7 @@ client.on("guildMemberAdd", member => {
         .setFooter({text: "Destroyerjkaisen"})
         .setImage("https://cdn.discordapp.com/attachments/926429282752946176/985201546411245619/IMG_20220611_171904.jpg")
         .setDescription(`Ciao ${member.toString()}, benvenuto nel server Djkaisen. test <#987775840009994253>`)
+        .setTimestamp()
  
     client.channels.cache.get("987827065610960897").send({embeds: [embed]});
 });
@@ -213,6 +214,7 @@ client.on("guildMemberRemove", member => {
         .setFooter({text: "Destroyerjkaisen"})
         .setImage("https://cdn.discordapp.com/attachments/926429282752946176/985201546411245619/IMG_20220611_171904.jpg")
         .setDescription(`Addio ${member.toString()}, è uscito dal server . test <#988487931947778149>`)
+        .setTimestamp()
 
     client.channels.cache.get("988487931947778149").send({embeds: [embed]});
 })
