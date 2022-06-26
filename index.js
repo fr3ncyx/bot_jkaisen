@@ -107,18 +107,6 @@ client.on("messageCreate", (message) => {
 
         message.channel.send({embeds: [embed] })
     }
-
-    if (message.content == "!team") {
-        var embed = new Discord.MessageEmbed()
-            .setColor("#ff0000")
-            .setTitle("DestroyersJkaisen")
-            .setURL("")
-            .setDescription(`${message.author.username} ecco a te il link discord: https://discord.gg/Pkhx88T3Z4 `)
-            .setTimestamp()
-            .addField("Titolo1" , "Contenuto1", false)
-
-        message.channel.send({embeds: [embed] })
-    }
 });
 
 function oraAttuale() {
@@ -126,7 +114,7 @@ function oraAttuale() {
     var minutes = new Date().getMinutes();
 
     var canale = client.channels.cache.get("984572514904715294")
-    if (hour == 14 && minutes == 1) {
+    if (hour == 15 && minutes == 15) {
         canale.send("Notifica")
     }
 }
