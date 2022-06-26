@@ -39,7 +39,7 @@ client.on("messageCreate", message => {
 })
 
 client.on("messageCreate", message => {
-    if (message.content.startsWith("!teamtag1")) {
+    if (message.content.startsWith("!clantag")) {
         let utente = message.mentions.members.first();
                 let embed = new Discord.MessageEmbed()
                     .setColor("#ff0000")
@@ -47,8 +47,8 @@ client.on("messageCreate", message => {
                     .setDescription(`Ecco a te il tag del team ĐK*`)
 
                 message.channel.send({ embeds: [embed] })
-                
-            }  
+                message.member.send("hello")  
+            } 
         })
 
 client.on("messageCreate", message => {
