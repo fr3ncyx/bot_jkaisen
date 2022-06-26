@@ -41,11 +41,23 @@ client.on("messageCreate", message => {
 client.on("messageCreate", message => {
     if (message.content.startsWith("!teamtag1")) {
         let utente = message.mentions.members.first();
-        let embed = new Discord.MessageEmbed()
-            .setTitle(`${utente()}`)
-            .setDescription(`Ecco a te il tag del team`)
+        if (!message.member.permissions.has('BAN_MEMBERS')) {
+            return message.channel.send('Non hai il permesso');
+        }
+        if (!utente) {
+            return message.channel.send('Non hai menzionato nessun utente');
+        }
+        if (!utente.bannable) {
+            return message.channel.send('Io non ho il permesso');
+        }
+        utente()
+            .then(() => {
+                let embed = new Discord.MessageEmbed()
+                    .setTitle(`${utente.user.username}`)
+                    .setDescription(`Ecco a te il tag del team`)
 
-        message.channel.send({ embeds: [embed] })
+                message.channel.send({ embeds: [embed] })
+            })
     }
 })
 
