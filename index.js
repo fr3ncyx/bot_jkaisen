@@ -396,7 +396,7 @@ client.on("messageCreate", message => {
 })
 
 client.on(`messageUpdate`, (oldMessage, newMessage) => {
-    if (newMessage.guild.id !== "984573023900278824")
+    if (newMessage.guild.id !== "id")
     var embed = new Discord.MessageEmbed()
     .setTitle("Messaggio modificato")
     .setDescription("Messaggio modificato da " + oldMessage.author.username)
