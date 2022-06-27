@@ -1,7 +1,5 @@
 const Discord = require("discord.js")
-const client = new Discord.Client({
-    intents: ["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_EMOJIS_AND_STICKERS", "GUILD_INTEGRATIONS"]
-})
+const client = new Discord.Client({intents: 32767})
 const fs = require("fs");
 const { userInfo } = require("os");
 
