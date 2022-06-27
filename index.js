@@ -402,7 +402,7 @@ client.on(`messageUpdate`, (oldMessage, newMessage) => {
     .setDescription("Messaggio modificato da " + oldMessage.author.username)
     .addField("Messaggio di prima", oldMessage)
     .addField("Nuovo messaggio", newMessage)
-    .setColor("BLUE")
+    .setColor("#ff0000")
      
     client.channels.cache.get("991061700851666994").send({embeds: [embed]})
 })
