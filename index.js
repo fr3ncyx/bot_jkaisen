@@ -394,3 +394,15 @@ client.on("messageCreate", message => {
         message.channel.send({embeds: [embed]})
     }
 })
+
+client.on(`messageUpdate`, (oldMessage, newMessage) => {
+    if (newMessage.guild.id !== "")
+    var embed = new Discord.MessageEmbed()
+    .setTitle("Messaggio modificato")
+    .setDescription("Messaggio modificato da " + oldMessage.author.username)
+    .addField("Messaggio di prima", oldMessage)
+    .addField("Nuovo messaggio", newMessage)
+    .setColor("BLUE")
+     
+    client.channels.cache.get("991061700851666994").send({embeds: [embed]})
+})
