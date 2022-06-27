@@ -377,7 +377,7 @@ client.on("messageCreate", message => {
 });
 
 client.on("messageCreate", message => {
-    var parolacce = ["porco dio", "cazzo", "diocane", "dio cane","merda", "DIOCANE", "NEGRO", "n3gro", "negr0", "Negro", "Cazzo", "Porco dio", "Dio cane"]
+    var parolacce = ["porco dio", "cazzo", "diocane", "dio cane","merda", "DIOCANE", "NEGRO", "n3gro", "negr0", "Negro", "Cazzo", "Porco dio", "Dio cane", "Porca madonna", "PORCA MADONNA","gay", "G4y", "GAY"]
     var trovata = false; 
 
     parolacce.forEach(parola => {
