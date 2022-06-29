@@ -394,9 +394,3 @@ client.on("messageCreate", message => {
         message.channel.send({embeds: [embed]})
     }
 });
-
-client.on("messageCreate", (message) => {
-    if (message.content == "!image <member>")
-    var embed = new Discord.MessageEmbed()
-    .setTimestamp()    
-})
