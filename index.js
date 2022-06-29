@@ -398,6 +398,5 @@ client.on("messageCreate", message => {
 client.on("messageCreate", (message) => {
     if (message.content == "!image <member>")
     var embed = new Discord.MessageEmbed()
-    .setImage()
-    
+    .setTimestamp()    
 })
