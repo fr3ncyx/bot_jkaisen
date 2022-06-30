@@ -4,6 +4,7 @@ const client = new Discord.Client({
     partials: ["MESSAGE", "CHANNEL", "REACTION"]
 });
 const fs = require("fs");
+const moment = require("moment")
 
 client.login(process.env.token)
 
@@ -14,6 +15,13 @@ client.on("guildMemberAdd", member => {
 
 client.on("ready", () => {
     console.log("Bot online");
+})
+
+client.on("ready", () => {
+    client.user.setActivity("Testo", {
+        type: "WATCHING",
+        url: "https://discord.gg/dbgkvQV2XS"
+    });
 })
 client.on("messageCreate", message => {
     if (message.content.startsWith("!ban")) {
@@ -464,3 +472,4 @@ client.on("messageCreate", message => {
         message.channel.send({embeds: [embed]})
     }
 });
+
