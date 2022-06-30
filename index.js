@@ -4,7 +4,6 @@ const client = new Discord.Client({
     partials: ["MESSAGE", "CHANNEL", "REACTION"]
 });
 const fs = require("fs");
-const moment = require("moment")
 
 client.login(process.env.token)
 
