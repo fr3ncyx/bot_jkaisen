@@ -123,7 +123,7 @@ setInterval(oraAttuale, 1000*60);
 client.on("messageCreate", (message)  => {
     if (message.content == "!reactionroles") {
         var embed = new Discord.MessageEmbed()
-        .setColor("#071572")
+        .setColor("#0000FF")
         .setTitle("Reaction roles")
         .setDescription("Clicca sulla reazione per ottenere il ruolo")
         .addField("𝔹𝕠𝕪💙", "𝔾𝕚𝕣𝕝𝕤💜", true)
