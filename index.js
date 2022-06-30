@@ -126,7 +126,7 @@ client.on("messageCreate", (message)  => {
         .setColor("#ff0000")
         .setTitle("Reaction roles")
         .setDescription("Clicca sulla reazione per ottenere il ruolo")
-        .addField("𝔹𝕠𝕪💙", "", true)
+        .addField("𝔹𝕠𝕪💙", "skfuh", true)
         .setFooter("DJKAISEN", "https://lh3.googleusercontent.com/BhsnfjVkGY_A3S9RAMn7pd5emKr84qRqYGMiYH7osy4oH3_D9QYWOthX8g6qv6en66pW5A=s85")
 
     message.channel.send({embeds: [embed] })
