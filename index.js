@@ -473,8 +473,8 @@ client.on("messageCreate", message => {
 });
 
 client.on("messageCreate", message => {
-    if (message.content.startsWith("!troll")) {
-        if (message.content == "!troll") {
+    if (message.content.startsWith("!benvenuto")) {
+        if (message.content == "!benvenuto") {
             var utente = message.member;
         }
         else {
