@@ -472,7 +472,7 @@ client.on("messageCreate", message => {
     }
 });
 
-client.on("message", message => {
+client.on("messageCreate", message => {
     if (message.content.startsWith("!userinfo")) {
         if (message.content == "!userinfo") {
             var utente = message.member;
