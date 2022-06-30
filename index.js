@@ -126,8 +126,8 @@ client.on("messageCreate", (message)  => {
         .setColor("#ff0000")
         .setTitle("Reaction roles")
         .setDescription("Clicca sulla reazione per ottenere il ruolo")
-        .addField("𝔹𝕠𝕪💙", "-", true)
-        .addField("𝔾𝕚𝕣𝕝𝕤💜", "-", false)
+        .addField("𝔹𝕠𝕪💙", "----", true)
+        .addField("𝔾𝕚𝕣𝕝𝕤💜", "----", false)
 
     message.channel.send({embeds: [embed] })
         .then(msg => {
