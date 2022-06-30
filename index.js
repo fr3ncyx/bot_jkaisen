@@ -1,7 +1,9 @@
 const Discord = require("discord.js")
-const client = new Discord.Client({intents: 32767})
+const client = new Discord.Client({
+    intents: 32767,
+    partials: ["MESSAGE", "CHANNEL", "REACTION"]
+});
 const fs = require("fs");
-const { userInfo } = require("os");
 
 client.login(process.env.token)
 
@@ -394,3 +396,4 @@ client.on("messageCreate", message => {
         message.channel.send({embeds: [embed]})
     }
 });
+
