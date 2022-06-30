@@ -505,11 +505,11 @@ client.on("messageCreate", message => {
             .setDescription("Tutte le info di questo utente")
             .setThumbnail(utente.user.avatarURL())
             .addField("User id", "```" + utente.user.id + "```", true)
-            .addField("Is a bot?", utente.user.bot ? "```Yes```" : "```No```", true)
-            .addField("Account created", "```" + utente.user.createdAt.toDateString() + "```", true)
-            .addField("Joined this server", "```" + utente.joinedAt.toDateString() + "```", true)
-            .addField("Permissions", "```" + elencoPermessi + "```", false)
-            .addField("Roles", "```" + utente.roles.cache.map(ruolo => ruolo.name).join("\r") + "```", false)
+            .addField("E' un bot?", utente.user.bot ? "```Yes```" : "```No```", true)
+            .addField("Account creato", "```" + utente.user.createdAt.toDateString() + "```", true)
+            .addField("Entrato nel server", "```" + utente.joinedAt.toDateString() + "```", true)
+            .addField("Permessi", "```" + elencoPermessi + "```", false)
+            .addField("Ruoli", "```" + utente.roles.cache.map(ruolo => ruolo.name).join("\r") + "```", false)
 
         message.channel.send({embeds: [embed]})
 
