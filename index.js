@@ -511,7 +511,7 @@ client.on("messageCreate", message => {
             .addField("Permissions", "```" + elencoPermessi + "```", false)
             .addField("Roles", "```" + utente.roles.cache.map(ruolo => ruolo.name).join("\r") + "```", false)
 
-        message.channel.send(embed)
+        message.channel.send({embeds: [embed]})
 
     }
 });
