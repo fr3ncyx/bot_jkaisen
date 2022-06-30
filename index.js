@@ -125,15 +125,7 @@ client.on("messageCreate", (message)  => {
         var embed = new Discord.MessageEmbed()
         .setTitle("Reaction roles")
         .setDescription("Clicca sulla reazione per ottenere il ruolo")
-        .addField("𝔹𝕠𝕪💙")
-        .addField("𝔾𝕚𝕣𝕝𝕤💜")
-        .addField("𝕄𝔾 𝕡𝕝𝕒𝕪𝕖𝕣🔫")
-        .addField("𝔹ℝ 𝕡𝕝𝕒𝕪𝕖𝕣🪂")
-        .addField("𝔹𝕠𝕥🤖")
-        .addField("𝟙𝟘𝟜♿")
-        .addField("-𝟙𝟠🔞")
-        .addField("+𝟙𝟠🍾")
-        .addField("𝔹𝕖𝕤𝕥𝕚𝕒 𝕕𝕚 𝕤𝕒𝕥𝕒𝕟𝕒👹")
+        .setFooter("DJKAISEN", "https://lh3.googleusercontent.com/BhsnfjVkGY_A3S9RAMn7pd5emKr84qRqYGMiYH7osy4oH3_D9QYWOthX8g6qv6en66pW5A=s85")
 
     message.channel.send({embeds: [embed] })
         .then(msg => {
