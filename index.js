@@ -486,6 +486,7 @@ client.on("messageCreate", message => {
                 if (utente.permissions.has(permessi[i]))
                     elencoPermessi += `- ${permessi[i]}\n`
         }
+        let utente = message.member;
         let embed = new Discord.MessageEmbed()
             .setTitle(utente.user.tag)
             .setDescription("Tutte le info di questo utente")
