@@ -137,11 +137,9 @@ client.on("messageCreate", (message)  => {
 client.on("messageReactionAdd", async function (messageReaction, user) {
     if (user.bot) return 
 
-    var partials = new Discord.Client({partials: ["MESSAGE", "CHANNEL", "REACTION"]})
-
     if (messageReaction.message.partial) await messageReaction.message.fetch();
 
-    if (messageReaction.message.id == "990622416734650368") {
+    if (messageReaction.message.id == "991982689018196008") {
         if (messageReaction._emoji.name == "👍") {
             var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
             utente.roles.add("988499438106460160");
@@ -158,7 +156,7 @@ client.on("messageReactionRemove", async function (messageReaction, user) {
 
     if (messageReaction.message.partial) await messageReaction.message.fetch();
 
-    if (messageReaction.message.id == "988499318342287370") {
+    if (messageReaction.message.id == "991982689018196008") {
         if (messageReaction._emoji.name == "👍") {
             var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
             utente.roles.remove("988499438106460160");
