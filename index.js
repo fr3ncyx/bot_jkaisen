@@ -17,8 +17,8 @@ client.on("ready", () => {
 })
 
 client.on("ready", () => {
-    client.user.setActivity("Testo", {
-        type: "WATCHING",
+    client.user.setActivity("DJKAISEN", {
+        type: "PLAYING",
         url: "https://discord.gg/dbgkvQV2XS"
     });
 })
