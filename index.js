@@ -125,6 +125,15 @@ client.on("messageCreate", (message)  => {
         var embed = new Discord.MessageEmbed()
         .setTitle("Reaction roles")
         .setDescription("Clicca sulla reazione per ottenere il ruolo")
+        .addField("𝔹𝕠𝕪💙", true)
+        .addField("𝔾𝕚𝕣𝕝𝕤💜", false)
+        .addField("𝕄𝔾 𝕡𝕝𝕒𝕪𝕖𝕣🔫", true)
+        .addField("𝔹ℝ 𝕡𝕝𝕒𝕪𝕖𝕣🪂", false)
+        .addField("𝔹𝕠𝕥🤖",true)
+        .addField("𝟙𝟘𝟜♿", false)
+        .addField("-𝟙𝟠🔞", true)
+        .addField("+𝟙𝟠🍾",false)
+        .addField("𝔹𝕖𝕤𝕥𝕚𝕒 𝕕𝕚 𝕤𝕒𝕥𝕒𝕟𝕒👹",true)
 
     message.channel.send({embeds: [embed] })
         .then(msg => {
@@ -146,14 +155,42 @@ client.on("messageReactionAdd", async function (messageReaction, user) {
 
     if (messageReaction.message.partial) await messageReaction.message.fetch();
 
-    if (messageReaction.message.id == "991982689018196008") {
-        if (messageReaction._emoji.name == "👍") {
+    if (messageReaction.message.id == "992025113744650340") {
+        if (messageReaction._emoji.name == "💙") {
             var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
-            utente.roles.add("988499438106460160");
+            utente.roles.add("954932254856085594");
         }
-        if (messageReaction._emoji.name == "👎") {
+        if (messageReaction._emoji.name == "💜") {
             var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
-            utente.roles.add("988499497497788489");
+            utente.roles.add("954932047787466784");
+        }
+        if(messageReaction.emoji.name == "🔫") {
+            var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
+            utente.roles.add("957110452180107304");
+        }
+        if(messageReaction.emoji.name == "🪂") {
+            var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
+            utente.roles.add("957110576830644304")
+        }
+        if(messageReaction.emoji.name == "🤖") {
+            var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
+            utente.roles.add("955813950983925781")
+        }
+        if(messageReaction.emoji.name == "♿") {
+            var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
+            utente.roles.add("954932618061811782")
+        }
+        if(messageReaction.emoji.name == "🔞") {
+            var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
+            utente.roles.add("957109743615348776")
+        }
+        if(messageReaction.emoji.name == "🍾") {
+            var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
+            utente.roles.add("957109513163534417")
+        }
+        if(messageReaction.emoji.name == "👹") {
+            var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
+            utente.roles.add("954933380850532373")
         }
     }
 })
@@ -163,14 +200,42 @@ client.on("messageReactionRemove", async function (messageReaction, user) {
 
     if (messageReaction.message.partial) await messageReaction.message.fetch();
 
-    if (messageReaction.message.id == "991982689018196008") {
-        if (messageReaction._emoji.name == "👍") {
+    if (messageReaction.message.id == "992025113744650340") {
+        if (messageReaction._emoji.name == "💙") {
             var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
-            utente.roles.remove("988499438106460160");
+            utente.roles.remove("954932254856085594");
         }
-        if (messageReaction._emoji.name == "👎") {
+        if (messageReaction._emoji.name == "💜") {
             var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
-            utente.roles.remove("988499497497788489");
+            utente.roles.remove("954932047787466784");
+        }
+        if(messageReaction.emoji.name == "🔫") {
+            var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
+            utente.roles.remove("957110452180107304");
+        }
+        if(messageReaction.emoji.name == "🪂") {
+            var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
+            utente.roles.remove("957110576830644304")
+        }
+        if(messageReaction.emoji.name == "🤖") {
+            var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
+            utente.roles.remove("955813950983925781")
+        }
+        if(messageReaction.emoji.name == "♿") {
+            var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
+            utente.roles.remove("954932618061811782")
+        }
+        if(messageReaction.emoji.name == "🔞") {
+            var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
+            utente.roles.remove("957109743615348776")
+        }
+        if(messageReaction.emoji.name == "🍾") {
+            var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
+            utente.roles.remove("957109513163534417")
+        }
+        if(messageReaction.emoji.name == "👹") {
+            var utente = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
+            utente.roles.remove("954933380850532373")
         }
     }
 })
