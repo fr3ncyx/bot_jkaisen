@@ -121,15 +121,22 @@ function oraAttuale() {
 setInterval(oraAttuale, 1000*60);
 
 client.on("messageCreate", (message)  => {
-    if (message.content == "!autoroles") {
+    if (message.content == "!reactionroles") {
         var embed = new Discord.MessageEmbed()
         .setTitle("Reaction roles")
         .setDescription("Clicca sulla reazione per ottenere il ruolo")
 
     message.channel.send({embeds: [embed] })
         .then(msg => {
-            msg.react("👍")
-            msg.react("👎")
+            msg.react("💙")
+            msg.react("💜")
+            msg.react("🔫")
+            msg.react("🪂")
+            msg.react("🤖")
+            msg.react("♿")
+            msg.react("🔞")
+            msg.react("🍾")
+            msg.react("👹")
         })
     }
 })
