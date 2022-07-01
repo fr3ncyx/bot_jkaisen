@@ -442,7 +442,7 @@ client.on("messageCreate", message => {
             return message.channel.send("Inserisci un numero valido")
         }
         if (count > 200) {
-            return message.channel.send("Non puoi cancellare più di 100 messaggi")
+            return message.channel.send("Non puoi cancellare più di 200 messaggi")
         }
         message.channel.bulkDelete(count, true)
         message.channel.send(count + " messaggi eliminati").then(msg => {
