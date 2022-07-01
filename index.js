@@ -249,26 +249,26 @@ client.on("messageCreate", (message) => {
    
     if (message.content == "!cpita") {
         var embed = new Discord.MessageEmbed()
-            .setColor("")
-            .setTitle("")
-            .setDescription("")
-            .setThumbnail("")
-            .addField("")
-            .addField("")
-            .addField("")
+            .setColor("#9E8506")
+            .setTitle("丨CP SHOP - THE DESTROYERSKAISEN ITALIANO")
+            .setDescription("Qui puoi trovare CP (punti COD) a prezzi molto più bassi rispetto al listino base. Fino al 60% in meno. Se vuoi ordinare o ricevere assistenza, apri un ticket nel canale 𝐒𝐮𝐩𝐩𝐨𝐫𝐭. Pagamento solo su PayPal")
+            .setThumbnail("https://static1-us.millenium.gg/articles/7/95/37/@/111084-1222053-call-of-duty-points-orig-1-article_image_t-1.jpg")
+            .addField("Prezzo", "1°> €10 - 1300 CP")
+            .addField("Prezzo", "2°> €15 - 2400 CP")
+            .addField("Prezzo", "3°> €20 - 3700 CP")
 
         message.channel.send({embeds: [embed] })
     }
 
     if(message.content == "!cpeng") {
         var embed = new Discord.MessageEmbed()
-            .setColor("")
-            .setTitle("")
-            .setDescription("")
-            .setThumbnail("")
-            .addField("")
-            .addField("")
-            .addField("")
+            .setColor("#9E8506")
+            .setTitle("丨CP SHOP - THE DESTROYERSKAISEN ITALIANO")
+            .setDescription("Here you can find CPs (COD Points) at the lowest price possible. Up to 60% less than normal price. If you want to order to to receive support, open a ticket in the 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 channel. Payment PayPal only")
+            .setThumbnail("https://static1-us.millenium.gg/articles/7/95/37/@/111084-1222053-call-of-duty-points-orig-1-article_image_t-1.jpg")
+            .addField("Price", "1°> €10 - 1300 CP")
+            .addField("Price", "2°> €15 - 2400 CP")
+            .addField("Price", "3°> €20 - 3700 CP")
 
         message.channel.send({embeds: [embed] })
     }
@@ -512,6 +512,6 @@ client.on("messageCreate", message => {
             .addField("Ruoli", "```" + utente.roles.cache.map(ruolo => ruolo.name).join("\r") + "```", false)
 
         message.channel.send({embeds: [embed]})
-
     }
 });
+
