@@ -249,7 +249,7 @@ client.on("messageCreate", (message) => {
    
     if (message.content == "!cpita") {
         var embed = new Discord.MessageEmbed()
-            .setColor("#9E8506")
+            .setColor("#CCAE18")
             .setTitle("丨CP SHOP - THE DESTROYERSKAISEN ITALIANO")
             .setDescription("Qui puoi trovare CP (punti COD) a prezzi molto più bassi rispetto al listino base. Fino al 60% in meno. Se vuoi ordinare o ricevere assistenza, apri un ticket nel canale 𝐒𝐮𝐩𝐩𝐨𝐫𝐭. Pagamento solo su PayPal")
             .setThumbnail("https://static1-us.millenium.gg/articles/7/95/37/@/111084-1222053-call-of-duty-points-orig-1-article_image_t-1.jpg")
@@ -262,7 +262,7 @@ client.on("messageCreate", (message) => {
 
     if(message.content == "!cpeng") {
         var embed = new Discord.MessageEmbed()
-            .setColor("#9E8506")
+            .setColor("#CCAE18")
             .setTitle("丨CP SHOP - THE DESTROYERSKAISEN ITALIANO")
             .setDescription("Here you can find CPs (COD Points) at the lowest price possible. Up to 60% less than normal price. If you want to order to to receive support, open a ticket in the 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 channel. Payment PayPal only")
             .setThumbnail("https://static1-us.millenium.gg/articles/7/95/37/@/111084-1222053-call-of-duty-points-orig-1-article_image_t-1.jpg")
