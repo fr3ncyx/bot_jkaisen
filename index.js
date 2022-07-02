@@ -52,8 +52,8 @@ client.on("messageCreate", message => {
                     .setColor("#ff0000")
                     .setTitle(`${utente.user.username}`)
                     .setDescription(`Ecco a te il tag del team: ĐҜ¤`)                    
-  
-                message.channel.send({ embeds: [embed] })
+      
+                message.channel.send({ embeds: [embed] }) 
             } 
         })
 
