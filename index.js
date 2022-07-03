@@ -47,9 +47,14 @@ client.on("messageCreate", message => {
 })
 
 client.on("messageCreate", message => {
-    if (message.content.startsWith(`!clantag + ${Discord.User}`)) {
-
-        message.utente.send(`${utente.user} ecco a te il tag`)
+    if (message.content.startsWith("!clantag")) {
+        let utente = message.mentions.members.first();
+                let embed = new Discord.MessageEmbed()
+                    .setColor("#ff0000")
+                    .setTitle(`${utente.user.username}`)
+                    .setDescription(`Ecco a te il tag del team: ĐҜ¤`)                    
+      
+                message.channel.send({ embeds: [embed] }) 
             } 
         })
 
