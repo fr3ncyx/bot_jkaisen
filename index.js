@@ -4,6 +4,7 @@ const client = new Discord.Client({
     partials: ["MESSAGE", "CHANNEL", "REACTION"]
 });
 const fs = require("fs");
+const { userInfo } = require("os");
 
 client.login(process.env.token)
 
@@ -46,8 +47,8 @@ client.on("messageCreate", message => {
 })
 
 client.on("messageCreate", message => {
-    if (message.content.startsWith("!clantag")) {
-        var utente = message.mentions.users()
+    if (message.content.startsWith(`!clantag + ${Discord.User}`)) {
+
         message.utente.send(`${utente.user} ecco a te il tag`)
             } 
         })
