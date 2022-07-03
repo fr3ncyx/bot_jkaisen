@@ -47,13 +47,8 @@ client.on("messageCreate", message => {
 
 client.on("messageCreate", message => {
     if (message.content.startsWith("!clantag")) {
-        let utente = message.mentions.members.first();
-                let embed = new Discord.MessageEmbed()
-                    .setColor("#ff0000")
-                    .setTitle(`${utente.user.username}`)
-                    .setDescription(`Ecco a te il tag del team: ĐҜ¤`)                    
-      
-                message.channel.send({ embeds: [embed] }) 
+        var utente = message.mentions.users()
+        message.utente.send(`${utente.user} ecco a te il tag`)
             } 
         })
 
@@ -102,10 +97,6 @@ client.on("messageCreate" , (message) => {
 })
 
 client.on("messageCreate", (message) => {
-    if (message.content == "!ciao") {
-        message.channel.send("ciao anche a te")
-    }
-
     if (message.content == "!embed") {
         var embed = new Discord.MessageEmbed()
             .setTitle("Titolo embed")
@@ -296,9 +287,6 @@ client.on("guildMemberRemove", member => {
     client.channels.cache.get("988487931947778149").send({embeds: [embed]});
 })
 
-
-
-global.nome = "Francy";
 client.on("messageCreate", message => {
     if (message.content == "!ticket") {
         var button1 = new Discord.MessageButton()
@@ -514,4 +502,6 @@ client.on("messageCreate", message => {
         message.channel.send({embeds: [embed]})
     }
 });
+
+
 
