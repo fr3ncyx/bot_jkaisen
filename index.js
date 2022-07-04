@@ -15,22 +15,8 @@ client.on("guildMemberAdd", member => {
 
 client.on("ready", () => {
     console.log("Bot online");
-
-    client.guilds.cache.forEach(guild => {
-        guild.commands.create({
-            name: "ping",
-            description:"Comando di test"
-        })
-    })
 })
 
-client.on("interactionCreate", interaction => {
-    if (!interaction.isCommand()) return
-
-    if (interaction.commandName == "ping") {
-        interaction.reply("Pong")
-    }
-})
 
 client.on("ready", () => {
     client.user.setActivity("DJKAISEN", {
