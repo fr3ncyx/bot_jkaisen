@@ -15,6 +15,12 @@ client.on("guildMemberAdd", member => {
 
 client.on("ready", () => {
     console.log("Bot online");
+
+    var server = client.guilds.cache.get("987775840009994250")
+    server.commands.create({
+        name: "ping",
+        description:"Comando di test"
+    })
 })
 
 client.on("ready", () => {
@@ -23,6 +29,7 @@ client.on("ready", () => {
         url: "https://discord.gg/dbgkvQV2XS"
     });
 })
+
 client.on("messageCreate", message => {
     if (message.content.startsWith("!ban")) {
         let utente = message.mentions.members.first();
