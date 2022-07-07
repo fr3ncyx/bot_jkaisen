@@ -269,28 +269,6 @@ client.on("messageCreate", (message) => {
     }
 });
 
-client.on("guildMemberAdd", member => {
-    if(member.user.bot) return
-    var embed = new Discord.MessageEmbed()
-        .setFooter({text: "Destroyerjkaisen"})
-        .setImage("https://cdn.discordapp.com/attachments/926429282752946176/985201546411245619/IMG_20220611_171904.jpg")
-        .setDescription(`Ciao ${member.toString()}, benvenuto nel server Djkaisen. test <#987775840009994253>`)
-        .setTimestamp()
- 
-    client.channels.cache.get("987827065610960897").send({embeds: [embed]});
-});
-
-client.on("guildMemberRemove", member => {
-    if(member.user.bot) return
-    var embed = new Discord.MessageEmbed()
-        .setFooter({text: "Destroyerjkaisen"})
-        .setImage("https://cdn.discordapp.com/attachments/926429282752946176/985201546411245619/IMG_20220611_171904.jpg")
-        .setDescription(`Addio ${member.toString()}, è uscito dal server . test <#988487931947778149>`)
-        .setTimestamp()
-
-    client.channels.cache.get("988487931947778149").send({embeds: [embed]});
-})
-
 client.on("messageCreate", message => {
     if (message.content == "!ticket") {
         var button1 = new Discord.MessageButton()
@@ -503,7 +481,7 @@ client.on("messageCreate", message => {
             .addField("Permessi", "```" + elencoPermessi + "```", false)
             .addField("Ruoli", "```" + utente.roles.cache.map(ruolo => ruolo.name).join("\r") + "```", false)
 
-        client.channels.cache.get("984573023900278824")
+        client.channels.cache.get("992057072415944794")
     }
 });
 
@@ -547,7 +525,7 @@ client.on("messageCreate", message => {
             .addField("Permessi", "```" + elencoPermessi + "```", false)
             .addField("Ruoli", "```" + utente.roles.cache.map(ruolo => ruolo.name).join("\r") + "```", false)
 
-        client.channels.cache.get("984573023900278824")
+        client.channels.cache.get("992057072415944794")
     }
 });
 
