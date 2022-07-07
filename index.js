@@ -83,11 +83,6 @@ client.on("messageCreate", message => {
                 })
         }
     })
-client.on("messageCreate" , (message) => {
-    if (message.content == "!teamtag") {
-        message.author.send("Djk (provvisorio)")
-    }
-});
 
 client.on("messageCreate", message => {
     var embed = new Discord.MessageEmbed()
@@ -470,8 +465,8 @@ client.on("messageCreate", message => {
 });
 
 client.on("messageCreate", message => {
-    if (message.content.startsWith("!benvenuto")) {
-        if (message.content == "!benvenuto") {
+    if (message.content.startsWith("Benvenuto")) {
+        if (message.content == "Benvenuto") {
             var utente = message.member;
         }
         else {
@@ -508,7 +503,51 @@ client.on("messageCreate", message => {
             .addField("Permessi", "```" + elencoPermessi + "```", false)
             .addField("Ruoli", "```" + utente.roles.cache.map(ruolo => ruolo.name).join("\r") + "```", false)
 
-        message.channel.send({embeds: [embed]})
+        client.channels.cache.get("984573023900278824")
+    }
+});
+
+
+client.on("messageCreate", message => {
+    if (message.content.startsWith("Benvenuta")) {
+        if (message.content == "Benvenuta") {
+            var utente = message.member;
+        }
+        else {
+            var utente = message.mentions.members.first();
+        }
+
+        if (!utente) {
+            message.channel.send("Non ho trovato questo utente")
+            return
+        }
+
+        var elencoPermessi = "";
+        if (utente.permissions.has("ADMINISTRATOR")) {
+            elencoPermessi = "👑 ADMINISTRATOR";
+        }
+        else {
+            var permessi = ["CREATE_INSTANT_INVITE", "KICK_MEMBERS", "BAN_MEMBERS", "MANAGE_CHANNELS", "MANAGE_GUILD", "ADD_REACTIONS", "VIEW_AUDIT_LOG", "PRIORITY_SPEAKER", "STREAM", "VIEW_CHANNEL", "SEND_MESSAGES", "SEND_TTS_MESSAGES", "MANAGE_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "READ_MESSAGE_HISTORY", "MENTION_EVERYONE", "USE_EXTERNAL_EMOJIS", "VIEW_GUILD_INSIGHTS", "CONNECT", "SPEAK", "MUTE_MEMBERS", "DEAFEN_MEMBERS", "MOVE_MEMBERS", "USE_VAD", "CHANGE_NICKNAME", "MANAGE_NICKNAMES", "MANAGE_ROLES", "MANAGE_WEBHOOKS"]
+
+            for (var i = 0; i < permessi.length; i++) {
+                if (utente.permissions.has(permessi[i])) {
+                    elencoPermessi += "- " + permessi[i] + "\r";
+                }
+            }
+        }
+
+        var embed = new Discord.MessageEmbed()
+            .setTitle(utente.user.tag)
+            .setDescription("Tutte le info di questo utente")
+            .setThumbnail(utente.user.avatarURL())
+            .addField("User id", "```" + utente.user.id + "```", true)
+            .addField("E' un bot?", utente.user.bot ? "```Yes```" : "```No```", true)
+            .addField("Account creato", "```" + utente.user.createdAt.toDateString() + "```", true)
+            .addField("Entrato nel server", "```" + utente.joinedAt.toDateString() + "```", true)
+            .addField("Permessi", "```" + elencoPermessi + "```", false)
+            .addField("Ruoli", "```" + utente.roles.cache.map(ruolo => ruolo.name).join("\r") + "```", false)
+
+        client.channels.cache.get("984573023900278824")
     }
 });
 
