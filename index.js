@@ -481,7 +481,7 @@ client.on("messageCreate", message => {
             .addField("Permessi", "```" + elencoPermessi + "```", false)
             .addField("Ruoli", "```" + utente.roles.cache.map(ruolo => ruolo.name).join("\r") + "```", false)
 
-        client.channels.cache.get("992057072415944794")
+        client.channels.cache.get("992057072415944794").send({embeds: [embed]})
     }
 });
 
@@ -525,7 +525,7 @@ client.on("messageCreate", message => {
             .addField("Permessi", "```" + elencoPermessi + "```", false)
             .addField("Ruoli", "```" + utente.roles.cache.map(ruolo => ruolo.name).join("\r") + "```", false)
 
-        client.channels.cache.get("992057072415944794")
+        client.channels.cache.get("992057072415944794").send({embeds: [embed]})
     }
 });
 
