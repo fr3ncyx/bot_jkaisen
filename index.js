@@ -518,13 +518,4 @@ client.on("messageCreate", message => {
     }
 });
 
-client.on("messageCreate", message => {
-    if (message.content == "!testembed")
-    var embed = new Discord.MessageEmbed()
-    .setDescription("ajkkasha",
-                    "ciaoo")
-    .addField("ciao", "ciao2")
-    message.channel.send({embeds: [embed]})
-})
-
 
