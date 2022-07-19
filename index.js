@@ -111,17 +111,6 @@ client.on("messageCreate", (message) => {
     }
 });
 
-function oraAttuale() {
-    var hour = new Date().getHours();
-    var minutes = new Date().getMinutes();
-
-    var canale = client.channels.cache.get("984573023900278824")
-    if (hour == 15 && minutes == 17) {
-        canale.send("Notifica")
-    }
-}
-setInterval(oraAttuale, 1000*60);
-
 client.on("messageCreate", (message)  => {
     if (message.content == "!reactionroles") {
         var embed = new Discord.MessageEmbed()
