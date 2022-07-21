@@ -522,7 +522,7 @@ client.on("messageCreate", message => {
     if (message.content == "mattia") {
     var embed = new Discord.MessageEmbed()
     .setTitle("test")
-    .setDescription("mattia live <❇️955622414174257192>")
+    .setDescription("mattia live <:tenero2:990574391198879765>")
     message.channel.send({embeds: [embed]})
     }
 })
