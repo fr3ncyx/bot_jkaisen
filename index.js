@@ -518,4 +518,9 @@ client.on("messageCreate", message => {
     }
 });
 
-
+client.on("messageCreate", message => {
+    var embed = new Discord.MessageEmbed()
+    .setTitle("test")
+    .setDescription("mattia live <❇️955622414174257192>")
+    message.channel.send({embeds: [embed]})
+})
