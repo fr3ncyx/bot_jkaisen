@@ -260,6 +260,9 @@ client.on("messageCreate", (message) => {
 
 client.on("messageCreate", message => {
     if (message.content == "!ticket") {
+        var embed = new Discord.MessageEmbed()
+        .setTitle("skjksahk")
+
         var button1 = new Discord.MessageButton()
             .setLabel("Apri ticket")
             .setCustomId("apriTicket")
@@ -267,7 +270,8 @@ client.on("messageCreate", message => {
 
         var row = new Discord.MessageActionRow()
             .addComponents(button1)
-    
+        
+        message.channel.send({embeds: [embed]})
         message.channel.send({ content: "Clicca sul bottone per aprire un ticket", components: [row] })
     }
 })
