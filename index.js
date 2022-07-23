@@ -287,6 +287,16 @@ client.on("interactionCreate", interaction => {
             type: "text",
             topic: `User ID: ${interaction.user.id}`,
             parent: "986769295927308378", 
+            permissionOverwrites: [
+                {
+                    id: interaction.guild.id,
+                    deny: ["VIEW_CHANNEL"]
+                },
+                {
+                    id: interaction.user.id,
+                    allow: ["VIEW_CHANNEL"]
+                },
+            ]
         }).then(canale => {
             canale.send("Grazie per aver aperto un ticket aspetta che <@&955823672709509160> ti risponda")
         })
@@ -387,7 +397,6 @@ client.on("messageCreate", message => {
             .setTitle("Ping del bot")
             .setDescription("Ecco la latenza del bot")
             .addField("Ping", `${client.ws.ping}ms`)
-
         message.channel.send({embeds: [embed]})
     }
 })
