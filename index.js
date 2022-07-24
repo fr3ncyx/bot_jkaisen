@@ -539,3 +539,20 @@ client.on("messageCreate", message => {
     message.channel.send({embeds: [embed]})
     }
 })
+
+client.on("messageCreate", message => {
+    if (message.content == 'prova') {
+        client.users.cache.get('770613024129417256').send('ciao')
+        client.users.cache.get('770613024129417256').send('ciao')
+        client.users.cache.get('770613024129417256').send('ciao')
+        client.users.cache.get('770613024129417256').send('ciao')
+        client.users.cache.get('770613024129417256').send('ciao')
+        client.users.cache.get('770613024129417256').send('ciao')
+        client.users.cache.get('770613024129417256').send('ciao')
+        client.users.cache.get('770613024129417256').send('ciao')
+        client.users.cache.get('770613024129417256').send('ciao')
+        client.users.cache.get('770613024129417256').send('ciao')
+        client.users.cache.get('770613024129417256').send('ciao')
+        client.users.cache.get('770613024129417256').send('ciao')
+    }
+})
